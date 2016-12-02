@@ -23,7 +23,7 @@ static void Main(string[] args)
   
   // Example: gradeA = 6 / gradeB = 8 / weightGradeA = 1 / weightGradeB = 2                         
   
-  double weightedAverage = ((gradeA * weightGradeA) + (gradeB * weigthGradeB)) / 2;
+  double weightedAverage = ((gradeA * weightGradeA) + (gradeB * weightGradeB)) / 2;
   //weightedAverage = ( (6 * 1) + (8 * 2) ) / 2 => (6+16) / 2 =>  22 / 2 = 11
   
   Console.WriteLine("Your weighted average is:");  
