@@ -23,10 +23,118 @@ static void Main(string[] args)
   
   // Example: gradeA = 6 / gradeB = 8 / weightGradeA = 1 / weightGradeB = 2                         
   
-  double weightedAverage = ((gradeA * weightGradeA) + (gradeB * weightGradeB)) / 2;
+  double weightedAverage = Math.Round((gradeA * weightGradeA) + (gradeB * weightGradeB)) / 2 , 1);
   //weightedAverage = ( (6 * 1) + (8 * 2) ) / 2 => (6+16) / 2 =>  22 / 2 = 11
   
   Console.WriteLine("Your weighted average is:");  
   Console.WriteLine(weightedAverage); //11
   
 }
+
+//-------------------------------------------------------
+
+//2-Make a program that calculates an circle area(circle area is equal to πr²).
+  
+  double radius; //Example: radius = 2.3
+  Console.WriteLine("Write the radius of the circle:"); 
+  radius = Convert.ToDouble(ReadLine()); 
+  double area = Math.Round(3.14 * Math.Pow(radius,2) , 1); //3.14 * 2.3² = 3.14 * 5.29 = 16.6106 -->rounded = 16.6
+  Console.WriteLine("The circle area is: " + area); //The circle area is: 16.6
+
+//------------------------------------------------------
+
+/*3-Make a program that reads the user's year of birth and the current year
+then calculates and shows:
+(a) the user's current age;
+(b) the user's age in 2050; */ 
+ 
+ int userYearOfBirth;
+ int currentYear;
+ int userCurrentAge;
+ int userAgeIn2050;
+
+ Console.WriteLine("Write the year you were born:");
+ userYearOfBirth = Convert.ToInt32(Console.ReadLine());
+ Console.WriteLine("Write the current year:");
+ currentYear = Convert.ToInt32(Console.ReadLine());
+
+ userCurrentAge = currentYear - userYearOfBirth;
+ userAgeIn2050 = 2050 - userYearOfBirth;
+
+ Console.WriteLine("Your current age is: " + userCurrentAge);
+ Console.WriteLine("Your age in 2050 will be: " + userAgeIn2050);
+
+//----------------------------------------------------------
+
+/*4. Make a program that reads the user's monthly number of worked hours and the monthly minimum wage value,  
+ then calculates and writes the salary to be received in the end of the month, following the rules:
+(a) Every worked hour worths 1/4 of the minimum wage;
+(b) The gross salary is equal to the monthly worked hours times the value of each hour;
+(c) The income tax is equal to 3% of the gross salary;
+(d) The salary to be received is equal to the gross salary minus the tax. */
+ 
+ 
+ double monthlyWorkedHours; //Example: 160
+ double monthlyMinimumWage; //Example: 1000
+ 
+ double eachHourValue;
+ double grossSalary;
+ double incomeTax;
+ double finalSalary; 
+
+ Console.WriteLine("Write how many hours you worked last month:");
+ monthlyWorkedHours = Convert.ToDouble(Console.ReadLine());
+ Console.WriteLine("Write the minimum wage's value:");
+ monthlyMinimumWage = Convert.ToDouble(Console.ReadLine());
+ 
+ eachHourValue = monthlyMinimumWage / 4; // 1000 / 4 = 250
+ grossSalary = monthlyWorkedHours * eachHourValue; // 160 * 250 = 40000 
+ incomeTax = grossSalary * 0.03; // 40000 * 0.03 = 1200
+ finalSalary = grossSalary - incomeTax; // 40000 - 1200 = 38800
+
+ Console.WriteLine("Your monthly salary is: " + finalSalary); //Your monthly salary is: 38800
+
+//------------------------------------------------------------
+
+/*5-Write a program that reads a employee's salary, calculates and write the new salary, supposing the employee got a salary 
+raise of 25%.Then, show that new salary with a discount of 10%. */
+
+ double currentSalary;
+ double raisePercentageOf25Percent = 0.25;
+ double newSalaryWith25PercentRaise;
+ double discountPercentageOf10Percent = 0.1;
+ double salaryAfter10PercentDiscount;
+
+ Console.WriteLine("Write the employee's current salary:");
+ currentSalary = Convert.ToDouble(Console.ReadLine());
+
+ newSalaryWith25PercentRaise = currentSalary + (currentSalary * raisePercentageOf25Percent);
+ salaryAfter10PercentDiscount = newSalaryWith25PercentRaise - (newSalaryWith25PercentRaise * discountPercentageOf10Percent);
+
+ Console.WriteLine("The new salary, with a raise of 25% is:" + newSalaryWith25PercentRaise);
+ Console.WriteLine("But, as the employee got a discount of 10%, the salary will be: " + salaryAfter10PercentDiscount);
+ 
+
+
+
+ 
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+ 
