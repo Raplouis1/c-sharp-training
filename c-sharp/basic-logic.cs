@@ -114,27 +114,3 @@ raise of 25%.Then, show that new salary with a discount of 10%. */
  Console.WriteLine("The new salary, with a raise of 25% is:" + newSalaryWith25PercentRaise);
  Console.WriteLine("But, as the employee got a discount of 10%, the salary will be: " + salaryAfter10PercentDiscount);
  
-
-
-
- 
-
-
- 
- 
- 
- 
-
-
-
-
-
- 
-
-
-
-
-
-
-
- 
