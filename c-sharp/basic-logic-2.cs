@@ -36,7 +36,7 @@
     Console.WriteLine("Delta is negative.This equation has no solution.");
  }
 
-//--------------------------------------------------------
+//-----------------------------------------------------------
 
 // 2-Make a program that reads a whole number and tells if it is multiple of 3 and 4 at the same time.
 
@@ -58,7 +58,7 @@
    Console.WriteLine(number + " is not multiple of both 3 and 4");
  }
 
-//--------------------------------------------------------
+//-----------------------------------------------------------
 
 /* 3-A hotel charges $60 per day plus service tax.The service tax is:
    $55 per day, if the customer stays for more than 15 days;
@@ -94,7 +94,36 @@
  
  bill = (chargePerDay + serviceTax) * numberOfDaysStayed; // bill = (60 + 80) * 10 = 140 * 10 = 1400
  Console.WriteLine("Mr's/Ms'"+ surname + " bill is: $" + bill); //Mr's/Ms' Hendrix bill is: $1400
- 
+
+//-----------------------------------------------------------
+
+// 4- Write a C# program that prompts the user to input three integer values and find the greatest value of the three values.
+
+ int a;
+ int b;
+ int c;
+
+ Console.WriteLine("Write three integer numbers:");
+ a = Convert.ToInt32(Console.ReadLine());
+ b = Convert.ToInt32(Console.ReadLine());
+ c = Convert.ToInt32(Console.ReadLine());
+
+ if(a > b && a > c)
+ {
+  Console.WriteLine("The first number, " + a + " is the greatest of the three numbers.");
+ }
+ else if(b > a && b > c)
+ {
+  Console.WriteLine("The second number, " + b + " is the greatest of the three numbers.");
+ }
+ else
+ {
+  Console.WriteLine("The third number, " + c + " is the greatest of the three numbers.");
+ }
+
+//-----------------------------------------------------------
+
+
   
    
  
