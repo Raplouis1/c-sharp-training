@@ -73,10 +73,10 @@
  double chargePerDay = 60;
  
  Console.WriteLine("Write the costumer's name and surname:");
- name = Console.ReadLine();
- surname = Console.ReadLine();
+ name = Console.ReadLine(); //Example: Jimi
+ surname = Console.ReadLine(); //Example: Hendrix
  Console.WriteLine("Write how long the costumer stayed:");
- numberOfDaysStayed = Convert.ToInt32(Console.ReadLine());
+ numberOfDaysStayed = Convert.ToInt32(Console.ReadLine()); //Example: 10
  
  
  if(numberOfDaysStayed > 15)
@@ -87,13 +87,13 @@
  {
   serviceTax = 60;  
  }
- else
+ else //this condition is true
  {
    serviceTax = 80;   
  } 
  
- bill = chargePerDay + serviceTax * numberOfDaysStayed;
- Console.WriteLine("Mr's/Ms'"+ surname + " bill is: $" + bill);
+ bill = (chargePerDay + serviceTax) * numberOfDaysStayed; // bill = (60 + 80) * 10 = 140 * 10 = 1400
+ Console.WriteLine("Mr's/Ms'"+ surname + " bill is: $" + bill); //Mr's/Ms' Hendrix bill is: $1400
  
   
    
