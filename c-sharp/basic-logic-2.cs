@@ -19,11 +19,11 @@
  x1 = ((-1 * b) + Math.Sqrt(delta)) / (2*a); // x1 = -0.4
  x2 = ((-1 * b) - Math.Sqrt(delta)) / (2*a); // x2 = -5.6
    
- if (delta  > 0) 
+ if (delta  > 0) //This condition will be true
  {
   Console.WriteLine("This equation has two solutions.");
-  Console.WriteLine("Delta is equal to " + delta);
-  Console.WriteLine("X1 is " + x1 + " and " + "X2 is " + x2);
+  Console.WriteLine("Delta is equal to " + delta); //Delta is equal to 28
+  Console.WriteLine("X1 is " + x1 + " and " + "X2 is " + x2); // X1 is -0.4 and X2 is -5.6
  }
  else if(delta == 0)
  {
@@ -104,17 +104,17 @@
  int c;
 
  Console.WriteLine("Write three integer numbers:");
- a = Convert.ToInt32(Console.ReadLine());
- b = Convert.ToInt32(Console.ReadLine());
- c = Convert.ToInt32(Console.ReadLine());
+ a = Convert.ToInt32(Console.ReadLine()); //Example: 1
+ b = Convert.ToInt32(Console.ReadLine()); //Example: 5
+ c = Convert.ToInt32(Console.ReadLine()); //Example: 3
 
  if(a > b && a > c)
  {
   Console.WriteLine("The first number, " + a + " is the greatest of the three numbers.");
  }
- else if(b > a && b > c)
+ else if(b > a && b > c) //This condition is true
  {
-  Console.WriteLine("The second number, " + b + " is the greatest of the three numbers.");
+  Console.WriteLine("The second number, " + b + " is the greatest of the three numbers."); //Console shows this
  }
  else
  {
@@ -128,11 +128,11 @@
  double a;
  
  Console.WriteLine("Write any number:");
- a = Convert.ToDouble(Console.ReadLine());
+ a = Convert.ToDouble(Console.ReadLine()); //Example: 25
 
- if(a >= 20 && a<=90)
+ if(a >= 20 && a<=90) //This condition is true
  {
-  Console.WriteLine("Your number is between 20 and 90.");
+  Console.WriteLine("Your number is between 20 and 90."); //This will be show in the console
  }
  else()
  {
@@ -140,19 +140,3 @@
  }
 
 //-----------------------------------------------------------
-
-
-
-  
-   
- 
-
-
-
-
-
-
-
-
-
-
