@@ -123,6 +123,25 @@
 
 //-----------------------------------------------------------
 
+/* 5-Write a programa that shows if a number is between 20 and 90 or not. */
+
+ double a;
+ 
+ Console.WriteLine("Write any number:");
+ a = Convert.ToDouble(Console.ReadLine());
+
+ if(a >= 20 && a<=90)
+ {
+  Console.WriteLine("Your number is between 20 and 90.");
+ }
+ else()
+ {
+  Console.WriteLine("Your number isn't between 20 and 90.");
+ }
+
+//-----------------------------------------------------------
+
+
 
   
    
