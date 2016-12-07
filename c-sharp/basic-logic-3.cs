@@ -146,7 +146,9 @@ $ 20.00
  double balance = 0;
  double withdrawValue;
  double depositValue;
-
+ 
+ Console.WriteLine("BANK OF GITHUB.");
+ Console.WriteLine("Hello Mr./Mrs.Account options:");
  Console.WriteLine("Press 'a' to check your BALANCE;");
  Console.WriteLine("Press 'b' to WITHDRAW;");
  Console.WriteLine("Press 'c' to DEPOSIT;");
@@ -157,51 +159,41 @@ $ 20.00
  {
    if (optionKey == 'a')
    {
-     Console.WriteLine("Seu saldo é $" + balance);                   
+      Console.WriteLine("Your balance is $" + balance);                   
    }
    else if(optionKey == 'b')
    {
-     if(balance == 0)
-     {
-       Console.WriteLine("Voce nao pode sacar.Voce nao tem dinheiro na sua conta.");
-     }
-     else
-     {
-      Console.WriteLine("Digite o quanto deseja retirar:");
-      withdrawValue = Convert.ToDouble(Console.ReadLine());
+      if(balance == 0)
+      {
+         Console.WriteLine("You can't withdraw.You don't have money.");
+      }
+      else
+      {
+         Console.WriteLine("Write the value you want to withdraw:");
+         withdrawValue = Convert.ToDouble(Console.ReadLine());
 
-        if (withdrawValue > balance)
-        {
-          Console.WriteLine("Saldo insuficiente.Digite outro valor.");
-          continue;                            
-        }
-        else
-        {
-          balance = balance - withdrawValue;
-          Console.WriteLine("Voce sacou $" + withdrawValue);                            
-        }                        
+         if (withdrawValue > balance)
+         {
+            Console.WriteLine("Not enough money.Write another value.");
+            continue;                            
+         }
+         else
+         {
+            balance = balance - withdrawValue;
+            Console.WriteLine("With withdrew $" + withdrawValue);                            
+         }                        
        }                   
       }
       else if(optionKey == 'c')
       {
-        Console.WriteLine("Digite o valor que deseja depositar:");
-        depositValue = Convert.ToDouble(Console.ReadLine());
-        balance = balance + depositValue;
-        Console.WriteLine("Você depositou o valor de $" +depositValue);
-      }
-      Console.WriteLine("Pressione 'a', 'b' ou 'c' para continuar.Aperte 'd' para sair.");
-      optionKey = Convert.ToChar(Console.ReadLine());
-      continue;
- }
- Console.WriteLine("Voce apertou d.Operação finalizada.");
-
- 
-
-  
-  
- 
-  
-
-
-
+         Console.WriteLine("Write the value you want to deposit:");
+         depositValue = Convert.ToDouble(Console.ReadLine());
+         balance = balance + depositValue;
+         Console.WriteLine("You deposited $" +depositValue);
+       }
+       Console.WriteLine("Press 'a', 'b' or 'c' to continue.Press 'd' to exit.");
+       optionKey = Convert.ToChar(Console.ReadLine());
+       continue;
+    }
+    Console.WriteLine("You pressed 'd'.Operation finished.");
  
