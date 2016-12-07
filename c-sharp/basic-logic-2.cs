@@ -1,4 +1,4 @@
-//Programming logic training with C# - Control flow - if/else
+//Programming logic training with C# - Flow control - if/else
 
 //-----------------------------------------------------------
 
