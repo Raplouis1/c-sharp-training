@@ -1,4 +1,4 @@
-// Programming logic training with C# - Control flow - while / do-while
+// Programming logic training with C# - Flow control - while / do-while
 
 //-----------------------------------------------------------
 
