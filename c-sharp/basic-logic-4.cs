@@ -7,7 +7,6 @@
      Knowing the informations above, write a program that calculates and shows the sequence to the 20th number.
 */
 
-
  int a = 0;
  int b = 1;
  int c; 
