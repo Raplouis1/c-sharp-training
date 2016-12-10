@@ -1,7 +1,7 @@
 /* -Mini project #1 - Creating a mini Pokémon Battle 
    -Flow control structures used: if/else/if - while - switch/case
    -The PLAYER has 2 potions and the opponent got only 1(Game balance as the opponent's CHARMANDER is stronger than your Pkmn).
-   -I used the random number generator function (rnd.Next(1,5); //a number from 1 to 4) to make an opponent's AI.The AI choose a 
+   -I used the random number generator function (rnd.Next(1,5); it generates a random number from 1 to 4) to make an opponent's AI.The AI choose a 
     random attack (TACKLE = -6HP and EMBER = -8HP.As EMBER is a FIRE move, it's stronger against BULBASAUR, that is a GRASS Pokémon)
     with the proportion of 3 to 1(numbers from 1 to 3 generate the TACKLE attack and the number 4 generates the EMBER attack) and
     this is used to balance the game(EMBER is strong but, only is generated a few times).
@@ -10,7 +10,7 @@
  int bulbasaurHp = 50; //Your Pokémon HP. When it reaches 0, you'll lose the battle.
  int charmanderHp = 50; //Opponent's Pokémon HP. When it reaches 0, he loses.             
  char chooseKey; //chooseKey-->The player choses one action: MOVES or POTION
- char moveKey; //moveKey-->The player choses one move: TACKLE ot VINE WHIP
+ char moveKey; //moveKey-->The player choses one move: TACKLE or VINE WHIP
  int potionHpRecoveryBulbasaur;            
  int playerPotionCounter = 2; //Shows how many potions still left in your bag.
  int opponentPotionCounter = 1; //Shows how many potions still left in your opponent's bag.
