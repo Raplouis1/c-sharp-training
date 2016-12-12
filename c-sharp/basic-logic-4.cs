@@ -55,3 +55,28 @@
 
 //-----------------------------------------------------------------------
 
+// 3-Write a program to read 10 numbers from keyboard and find their sum and average.
+
+double number, sum = 0;
+Console.WriteLine("Write 10 numbers.");
+for(int i = 0; i < 10; i++)
+{
+ Console.WriteLine("Write any number:");
+ number = Convert.ToDouble(Console.ReadLine());
+ sum += number; 
+}     
+average = sum / 10;
+Console.WriteLine("The sum of all numbers is: " + sum);
+Console.WriteLine("And the average is: " + average);
+
+
+
+
+
+
+
+
+
+
+
+
