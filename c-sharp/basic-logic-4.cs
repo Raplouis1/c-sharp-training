@@ -98,4 +98,3 @@ Console.WriteLine("And the average is: " + average); //And the average is: 55
  Console.WriteLine("The fatorial of your number is: " + fatorial); // The fatorial of your number is: 120      
 
 //----------------------------------------------------------------------- 
-
