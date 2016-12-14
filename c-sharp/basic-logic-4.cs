@@ -27,6 +27,7 @@
 //-----------------------------------------------------------------------
 
 // 2-Make a program that reads a number and shows it's multiplication table from 1 to 10
+
  int number;
  int multiplicationResult;
  Console.WriteLine("Write any whole number: ");
@@ -62,14 +63,43 @@ Console.WriteLine("Write 10 numbers.");
 for(int i = 0; i < 10; i++)
 {
  Console.WriteLine("Write any number:");
- number = Convert.ToDouble(Console.ReadLine());
- sum += number; 
+ number = Convert.ToDouble(Console.ReadLine()); //Example: 10 20 30 40 50 60 70 80 90 100
+ sum += number; // 0 += 10 = 10 += 20 = 30 += 30 = 60 ... = 550 // 10 + 20 + 30 + 40 + 50 + 60 + 70 + 80 + 90 + 100 = 550
 }     
-average = sum / 10;
-Console.WriteLine("The sum of all numbers is: " + sum);
-Console.WriteLine("And the average is: " + average);
+average = sum / 10; // average = 550 / 10(ten numbers) = 55
+Console.WriteLine("The sum of all numbers is: " + sum); //The sum of all number is: 550
+Console.WriteLine("And the average is: " + average); //And the average is: 55
 
+//-----------------------------------------------------------------------
 
+//4-Write a program to calculate the factorial of a given number.Example: 5! = 5.4.3.2.1 = 120 / Note: fatorial of 0 = 1
+
+ int n;
+ int fatorial;
+ 
+ Console.WriteLine("Write a whole number: ");
+ n = Convert.ToInt32(Console.ReadLine()); //Example: n = 5
+ fatorial = n; // 5 = 5 
+
+ if(n == 0)
+ {
+    fatorial = 1;
+ } 
+ else
+ {
+   for (int i = 1; i < n; i++) // i = 1 / i = 2 / i = 3 / i = 4 
+   {                    //5 - 1 = 4 ...                  
+   fatorial = fatorial * (n - i); // fatorial =  5 * 4 = 20
+                                  // fatorial = 20 * 3 = 60
+                                  // fatorial = 60 * 2 = 120
+                                  // fatorial =120 * 1 = 120
+   }                              //Note: 5 * 4 (5-1) * 3(5-2) * 2(5-3) * 1(5-4)
+ }           
+ Console.WriteLine("The fatorial of your number is: " + fatorial); // The fatorial of your number is: 120      
+
+//----------------------------------------------------------------------- 
+
+// 5-
 
 
 
