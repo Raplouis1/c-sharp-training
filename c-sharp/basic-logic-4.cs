@@ -99,14 +99,3 @@ Console.WriteLine("And the average is: " + average); //And the average is: 55
 
 //----------------------------------------------------------------------- 
 
-// 5-
-
-
-
-
-
-
-
-
-
-
