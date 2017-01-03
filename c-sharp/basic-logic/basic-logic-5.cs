@@ -1,4 +1,4 @@
-// Programming logic training with C# - Flow control - switch-case
+// Programming logic training with C# - miscellaneous
 
 //-----------------------------------------------------------------------
 
@@ -40,4 +40,5 @@ switch (operation)
 }
 
 //-----------------------------------------------------------------------
+
 
