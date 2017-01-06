@@ -14,11 +14,13 @@
 
 /*
 --Object: Pen (Bic Cristal)
+
 --Attributes:
  -Model: Cristal
  -Color: Blue
  -Tip size: 1.6
  -Lid
+
 --Methods:
  -Write
  -Take the lid off
@@ -33,7 +35,7 @@ class Pen //This is the class Pen. So, all kind of objects "pen" wil have this c
  boolean lid = true; //The lid in on the pen
  
  //These are the class' methods
- public void WriteSometing()
+ public void WriteSometing() //This method is used to do the action "write something"
  {
   if (lid == true)
   {
@@ -45,9 +47,9 @@ class Pen //This is the class Pen. So, all kind of objects "pen" wil have this c
   }
  } 
  
- public void LidOff()
+ public void LidOff() //This method "takes" the pen's lid off.
  {
-  lid = false;
+  lid = false; //This method turns "lid" attribute into "false", "taking" the pen's lid out.So, the pen object is able to write and etc.
  }
 }
 
@@ -61,7 +63,7 @@ static void main (string[] args)
  p1.model = "Cristal" //This is one of the object's attributes. -->Syntax: <object's name>.<attribute> = <value>
  p1.color = "Blue";
  p1.tipSize = 1.6;
- p1.WriteSometing();//This is one of the object's methods. --> Syntax: <object's name>.<method's name>(<parameter>);
+ p1.WriteSometing();//This is one of the prototypes of object's methods . --> Syntax: <object's name>.<method's name>(<parameter>);
  p1.LidOff();
 }
 
