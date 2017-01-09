@@ -32,7 +32,7 @@ class Pen //This is the class Pen. So, all kind of objects "pen" wil have this c
  string model; //Pen's model
  string color; //Pen's color
  float tipSize; //Pen's tip diameter
- boolean lid = true; //The lid in on the pen
+ bool lid = true; //The lid in on the pen
  
  //These are the class' methods
  public void WriteSometing() //This method is used to do the action "write something"
