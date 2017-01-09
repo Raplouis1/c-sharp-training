@@ -62,7 +62,7 @@ static void main (string[] args)
  Pen p1 = new Pen(); //It's the object(pen - p1). -->Syntax: <class> <object's name> = <instance> <class>;
  p1.model = "Cristal" //This is one of the object's attributes. -->Syntax: <object's name>.<attribute> = <value>
  p1.color = "Blue";
- p1.tipSize = 1.6;
+ p1.tipSize = 1.6f;
  p1.WriteSometing();//This is one of the prototypes of object's methods . --> Syntax: <object's name>.<method's name>(<parameter>);
  p1.LidOff();
 }
