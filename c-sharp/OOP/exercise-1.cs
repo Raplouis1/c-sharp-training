@@ -59,7 +59,7 @@ class Pen //This is the class Pen. So, all kind of objects "pen" wil have this c
 
 static void main (string[] args)
 {
- Pen p1 = new Pen; //It's the object(pen - p1). -->Syntax: <class> <object's name> = <instance> <class>;
+ Pen p1 = new Pen(); //It's the object(pen - p1). -->Syntax: <class> <object's name> = <instance> <class>;
  p1.model = "Cristal" //This is one of the object's attributes. -->Syntax: <object's name>.<attribute> = <value>
  p1.color = "Blue";
  p1.tipSize = 1.6;
