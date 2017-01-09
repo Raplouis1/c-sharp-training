@@ -7,13 +7,13 @@
     this is used to balance the game(EMBER is strong but, only is generated a few times).
 */
 
- uint bulbasaurHp = 50; //Your Pokémon HP. When it reaches 0, you'll lose the battle.
- uint charmanderHp = 50; //Opponent's Pokémon HP. When it reaches 0, he loses.             
+ int bulbasaurHp = 50; //Your Pokémon HP. When it reaches 0, you'll lose the battle.
+ int charmanderHp = 50; //Opponent's Pokémon HP. When it reaches 0, he loses.             
  char chooseKey; //chooseKey-->The player choses one action: MOVES or POTION
  char moveKey; //moveKey-->The player choses one move: TACKLE or VINE WHIP
- uint potionHpRecoveryBulbasaur;            
- uint playerPotionCounter = 2; //Shows how many potions still left in your bag.
- uint opponentPotionCounter = 1; //Shows how many potions still left in your opponent's bag.
+ int potionHpRecoveryBulbasaur;            
+ int playerPotionCounter = 2; //Shows how many potions still left in your bag.
+ int opponentPotionCounter = 1; //Shows how many potions still left in your opponent's bag.
  Console.WriteLine("MINI POKÉMON BATTLE");
  Console.WriteLine("Welcome.Your name is ASH.You have a BULBASAUR(50HP) and 2 POTIONS(HP+20)");
  Console.WriteLine("Your opponent is GARY, your neighbour.Gary has a CHARMANDER(50HP) and 1 POTION.");
