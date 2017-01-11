@@ -28,7 +28,7 @@
  
 class Pen //This is the class Pen. So, all kind of objects "pen" wil have this class' attributes and methods
 {
- //These are the class' attributes
+ //These are the class' attributes.You must specify their protection (public, private, etc).
  public string model; //Pen's model
  public string color; //Pen's color
  public float tipSize; //Pen's tip diameter
