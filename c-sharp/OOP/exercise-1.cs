@@ -32,7 +32,7 @@ class Pen //This is the class Pen. So, all kind of objects "pen" wil have this c
  public string model; //Pen's model
  public string color; //Pen's color
  public float tipSize; //Pen's tip diameter
- public bool lid = true; //The lid in on the pen
+ public bool lid; //The lid in on the pen
  
  //These are the class' methods
  public void WriteSometing() //This method is used to do the action "write something"
@@ -63,8 +63,10 @@ static void main (string[] args)
  p1.model = "Cristal" //This is one of the object's attributes. -->Syntax: <object's name>.<attribute> = <value>
  p1.color = "Blue";
  p1.tipSize = 1.6f;
- p1.WriteSometing();//This is one of the prototypes of object's methods . --> Syntax: <object's name>.<method's name>(<parameter>);
- p1.LidOff();
+ p1.lid = true;
+ p1.LidOff(); //This is one of the prototypes of object's methods . --> Syntax: <object's name>.<method's name>(<parameter>);
+ p1.WriteSometing();
+ 
 }
 
 //=======================================================================
