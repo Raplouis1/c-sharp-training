@@ -50,7 +50,7 @@
   -public - the member can be reached from anywhere.This is the least restrictive visibility.
     Enums and interfaces are, by default, publicly visible. 
   -private - can only be reached by members from the same class. This is the most restrictive visibility. 
-    Classes and structs are by default set to private visibility.It's is the strictiest level of protection. 
+    Classes and structs are by default set to private visibility.It's is the strictest level of protection. 
   -protected - members can only be reached from within the same class, or from a class which inherits from this class. 
   -internal - members can be reached from within the same project only. 
   -protected internal - the same as internal, except that also classes which inherits from this class can reach it members, 
