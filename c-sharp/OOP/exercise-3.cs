@@ -69,14 +69,63 @@
 //=======================================================================
 //=======================================================================
 
-//Using the example above, create a program in C# using access modifiers(public, private and protected):
+/* Using the example below, create a program in C# using access modifiers(public, private and protected):     
+  ------------
+  |Pen        | Class name
+  ------------  
+  |+model      | Attributes
+  |+color      |
+  |-tipSize    |  
+  |#lid        |
+  -------------
+  |+writeSometing()| Methods
+  |+status()   |  
+  |-lidOn()    |
+  |-lidOff()   |
+  -------------
+*/
 
+//Class Pen
 class Pen {
- public model;
- public color;
- private tipSize;
- protected remainingInk;
- protected lid;
+ public string model;
+ public string color;
+ private float tipSize;
+ protected bool lid;
+ 
+ public void writeSomething()
+ {
+  if (lid == true)
+  {
+   Console.WriteLine("The pen's lid in on.Take it off before use the pen.");
+  }
+   else
+  {
+   Console.WriteLine("You wrote: HELLO WORLD!!!");
+  }
+ }
+ 
+ public void PenStatus()
+ {
+  Console.WriteLine("It's a " + color + " pen.");
+  Console.WriteLine("The pen model is:  " + model);
+  Console.WriteLine("And the tip size is: " + tipSize);
+  Console.WriteLine("Is the pen lid on(true) or off(false) ? " + lid);
+  Console.WriteLine("\n\n");
+ }
+ 
+ public void LidOff()
+ {
+  lid = false;
+ }
+
+ public void LidOn()
+ {
+  lid = true;
+ }
+ 
+//Main Class
+ 
+ 
  
  
  
