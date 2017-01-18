@@ -41,6 +41,10 @@
   |-lidOn()    |
   |-lidOff()   |
   -------------
+  
+  •Note: In C#, in case the access modifiers are not specified, the default modifiers are:
+   -For class members and struct members, including nested classes and structs: private.
+   -For classes and structs: internal.
 */
 
 //=======================================================================
