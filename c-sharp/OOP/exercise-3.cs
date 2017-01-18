@@ -1,8 +1,7 @@
-//Test!!!
 /*Visibility (or access): indicates the level of access of the class' internal components (methods and attributes), i.e., how this items
  can be accessed.
  
- Using UML, we can set a visual class diagram to be easy to represent the class and it's visibility:
+ •Using UML, we can set a visual class diagram to be easy to represent the class and it's visibility:
  Example:
   ------------
   |Pen        | Class name
@@ -20,14 +19,13 @@
   |lidOff()   |
   -------------
   
-  UML Visibility modifiers:
+  •UML Visibility modifiers:
   In the UML, there are 3 symbols that indicates the visibility:
   + public - the component can be accessed by any other components.
   - private - the component can only be accessed by the other components in the same class.
   # protected - the component can only be accessed by the other components in the same class (and this class' subclasses).  
   
-  Example:
-  
+  Example:  
   ------------
   |Pen        | Class name
   ------------  
@@ -44,3 +42,12 @@
   |-lidOff()   |
   -------------
 */
+
+//=======================================================================
+//=======================================================================
+
+//Using the example above, create a program in C# using access modifiers(public, private and protected):
+
+Class Pen {
+ 
+
