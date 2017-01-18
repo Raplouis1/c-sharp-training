@@ -42,6 +42,25 @@
   |-lidOff()   |
   -------------
   
+//-----------------------------------------------------------------------
+  •Access modifiers in C#:
+  
+  •The most common types of visibility are private and public, but there are actually several other types of visibility within C#. 
+  Here is a complete list: 
+  -public - the member can be reached from anywhere.This is the least restrictive visibility.
+    Enums and interfaces are, by default, publicly visible. 
+  -private - can only be reached by members from the same class. This is the most restrictive visibility. 
+    Classes and structs are by default set to private visibility. 
+  -protected - members can only be reached from within the same class, or from a class which inherits from this class. 
+  -internal - members can be reached from within the same project only. 
+  -protected internal - the same as internal, except that also classes which inherits from this class can reach it members, 
+   even from another project. 
+  
+  So for instance, if you have two classes, Class1 and Class2, private members from Class1 can only be used within Class1. 
+  You can't create a new instance of Class1 inside of Class2, and then expect to be able to use its private members. 
+
+  If Class2 inherits from Class1, then only non-private members can be reached from inside of Class2.
+  
   •Note: In C#, in case the access modifiers are not specified, the default modifiers are:
    -For class members and struct members, including nested classes and structs: private.
    -For classes and structs: internal.
