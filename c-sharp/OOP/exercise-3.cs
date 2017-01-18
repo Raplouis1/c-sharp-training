@@ -113,18 +113,32 @@ class Pen {
   Console.WriteLine("\n\n");
  }
  
- public void LidOff()
+ private void LidOff()
  {
   lid = false;
  }
 
- public void LidOn()
+ private void LidOn()
  {
   lid = true;
  }
  
 //Main Class
  
+ static void Main(string[] args)
+ {
+  Pen.p1 = new Pen();
+  p1.model = "BIC cristal";
+  p1.color = "Blue";
+  //p1.tipSize = 0.5f; this two attributes are invalid because of the protection level of it's members in the class Pen
+  //p1.lid = true;
+  
+  p1.writeSomething();
+  p1.status();
+  //p1.lidOn(); this two methods are invalid because of the protection level of it's members in the class Pen
+  //p1.lidOff();
+   
+  //Note:The protected methods and attributes can be accessed later with setters and getters methods
  
  
  
