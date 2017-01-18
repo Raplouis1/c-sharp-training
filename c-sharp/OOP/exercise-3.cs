@@ -2,7 +2,7 @@
  can be accessed.
  
  •Using UML, we can set a visual class diagram to be easy to represent the class and it's visibility:
- Example:
+  Example:
   ------------
   |Pen        | Class name
   ------------  
@@ -48,6 +48,14 @@
 
 //Using the example above, create a program in C# using access modifiers(public, private and protected):
 
-Class Pen {
+class Pen {
+ public model;
+ public color;
+ private tipSize;
+ protected remainingInk;
+ protected lid;
+ 
+ 
+ 
  
 
