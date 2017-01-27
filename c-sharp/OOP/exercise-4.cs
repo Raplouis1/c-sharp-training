@@ -1,1 +1,1 @@
-//Special methods: Get, Set and Constructor
+//Properties (Get, Set) and Constructors Methods
