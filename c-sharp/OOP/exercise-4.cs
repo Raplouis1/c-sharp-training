@@ -73,9 +73,9 @@ class Program
     NOTE:
     -Different from Java, get and set properties in C# dont't need the get/set reference before an attribute.
      -Example: Set in java: e1.setExampleName("It´s just an example."); 
-               Set in C#: e1.ExampleName = "It´s just an example"; //This set the objetct attribute´s
+               Set in C#: e1.ExampleName = "It´s just an example"; //This set the object attribute to "It´s just an example."
                Get in Java: System.Out.Println("What is it? " + e1.getExampleName());
-               Get in C#: Console.WriteLine("What is it? " + e1.ExampleName);
+               Get in C#: Console.WriteLine("What is it? " + e1.ExampleName); //This get the object attribute "It´s just an example."
     */
   }
 }  
