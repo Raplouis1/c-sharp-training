@@ -83,4 +83,5 @@ class Program
   Your debt is: 50000
   Your GPA is: 3.6
   You're in the last semester
+  */
 }  
