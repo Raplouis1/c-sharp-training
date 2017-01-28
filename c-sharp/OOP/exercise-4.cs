@@ -18,36 +18,36 @@ class StudentStatus
   
   public int LoanDebt
   {
-    get{ return this.loanDebt;}
-    set{ this.loanDebt = loanDebt;}
+    get{ return loanDebt;}
+    set{ loanDebt = value;}
   }
   
   public float Gpa
   {
-    get{ return this.gpa;}
-    set{this.gpa = gpa;}
+    get{ return gpa;}
+    set{ gpa = value;}
   }
   public string CurrentSemester
   {
-    get{ return this.currentSemester;}
-    set{ this.currentSemester = currentSemester;}
+    get{ return currentSemester;}
+    set{ currentSemester = value;}
   }
   
   public void Status()
   {
     Console.WriteLine("Hello, " + name);
-    Console.WriteLine("Your debt is: " + this.loanDebt);
-    Console.WriteLine("Your GPA is: " + this.gpa);
-    Console.WriteLine("You're in the " + this.currentSemester + ".");
+    Console.WriteLine("Your debt is: " + loanDebt);
+    Console.WriteLine("Your GPA is: " + gpa);
+    Console.WriteLine("You're in the " + currentSemester + ".");
   }
   /*
   Or, you can write the method above like this:
   public void Status()
   {
     Console.WriteLine("Hello, " + name);
-    Console.WriteLine("Your debt is: " + getLoanDebt());
-    Console.WriteLine("Your GPA is: " + getGpa());
-    Console.WriteLine("You're in the " + getCurrentSemester() + ".");
+    Console.WriteLine("Your debt is: " + LoanDebt);
+    Console.WriteLine("Your GPA is: " + Gpa);
+    Console.WriteLine("You're in the " + CurrentSemester + ".");
   }
   */
 }
@@ -59,25 +59,23 @@ class Program
   {
     StudentStatus ss1 = new StudentStatus();
     ss1.name = "Joseph";
-    ss1.setLoanDebt(50000);
-    ss1.setGpa(3.6f);
-    ss1.setCurrentSemester("last");
+    ss1.setLoanDebt = 50000;
+    ss1.setGpa = 3.6f;
+    ss1.setCurrentSemester = "last";
     
     ss1.Status();
     /*
     Instead of the method above, you can use this:
-    Console.WriteLine("Hello, " + name + "\nYour student loan is: " + ss1.getStudentLoan() + "Your GPA is: " + ss1.getGpa() + 
-    "\nYou're in the " + ss1.getCurrentSemester() + ".");  */  
+    Console.WriteLine("Hello, " + ss1.name + "\nYour student loan is: " + ss1.LoanDebt + "Your GPA is: " + ss1.Gpa + 
+    "\nYou're in the " + ss1.CurrentSemester + ".");  */  
+    
+    /*
+    NOTE:
+    -Different from Java, get and set properties in C# dont't need the get/set reference before an attribute.
+     -Example: Set in java: e1.setExampleName("It´s just an example."); 
+               Set in C#: e1.ExampleName = "It´s just an example"; //This set the objetct attribute´s
+               Get in Java: System.Out.Println("What is it? " + e1.getExampleName());
+               Get in C#: Console.WriteLine("What is it? " + e1.ExampleName);
+    */
   }
-}
-    
-    
-    
-    
-    
-  
-  
-  
-  
-  
-  
+}  
