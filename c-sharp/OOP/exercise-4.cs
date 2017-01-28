@@ -38,7 +38,7 @@ class StudentStatus
     Console.WriteLine("Hello, " + name);
     Console.WriteLine("Your debt is: " + loanDebt);
     Console.WriteLine("Your GPA is: " + gpa);
-    Console.WriteLine("You're in the " + currentSemester + ".");
+    Console.WriteLine("You're in the " + currentSemester + " semester");
   }
   /*
   Or, you can write the method above like this:
@@ -47,7 +47,7 @@ class StudentStatus
     Console.WriteLine("Hello, " + name);
     Console.WriteLine("Your debt is: " + LoanDebt);
     Console.WriteLine("Your GPA is: " + Gpa);
-    Console.WriteLine("You're in the " + CurrentSemester + ".");
+    Console.WriteLine("You're in the " + CurrentSemester + " semester");
   }
   */
 }
@@ -67,7 +67,7 @@ class Program
     /*
     Instead of the method above, you can use this:
     Console.WriteLine("Hello, " + ss1.name + "\nYour student loan is: " + ss1.LoanDebt + "Your GPA is: " + ss1.Gpa + 
-    "\nYou're in the " + ss1.CurrentSemester + ".");  */  
+    "\nYou're in the " + ss1.CurrentSemester + " semester");  */  
     
     /*
     NOTE:
@@ -78,4 +78,9 @@ class Program
                Get in C#: Console.WriteLine("What is it? " + e1.ExampleName); //This get the object attribute "It´s just an example."
     */
   }
+  /*Output
+  Hello, Joseph
+  Your debt is: 50000
+  Your GPA is: 3.6
+  You're in the last semester
 }  
