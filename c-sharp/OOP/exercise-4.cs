@@ -1,5 +1,34 @@
 //Properties (Get, Set) and Constructors Methods
 
+/*Get and Set Properties: They're used to access protected attributes and methods inside a class.
+  Example:public class Example
+           {
+            private string firstAttribute;
+            
+            public string FirstAttribute
+            {
+             get { return firstAttribute; }
+             set { firstAttribute = value;}
+            }
+            
+            //Main Class
+            
+            class Program
+            {
+             static void Main (string[] args)
+             {
+              Example e1 = new Example();
+              e1.FirstAttribute = "Hello World!";
+              
+              Console.WriteLine("Your attribute is: " + e1.FirstAttribute );
+             }
+            }
+*/
+/* Constructor methods: special methods used when instantiating a class(i.e. initilizating an object).They don't return anything. 
+
+
+*/
+
 //===========================================================================
 
 /*1 - Get and Set exercise.
