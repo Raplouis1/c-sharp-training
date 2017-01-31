@@ -34,11 +34,10 @@
              public string constructorName;
              public int constructNumber;       
              
-             public ConstructorExample() //The method's name is the same it's class. 
-          
+             public ConstructorExample() //The method's name is the same it's class.           
              { //In this example, every object created from the "Constructor Example" class will have this attributes
               constructorName = "My name is Example!!!";
-              constructNumber = 1;
+              constructorNumber = 1;
              }
              
              public ConstructorExample(string cName, int cNumber)
@@ -54,7 +53,10 @@
               {
                ConstructorExample e1 = new ConstructorExample();
                ConstructorExample e2 = new ConstructorExample("My name is Example 2!!!", 2 );
-               e1.
+               Console.WriteLine("What is your name? " + e1.constructorName + "Number: " + e1.constructorNumber);
+               Console.WriteLine("What is your name? " + e2.cName + "Number: " + e2.cNumber);
+              }
+             }
 
 */
 
