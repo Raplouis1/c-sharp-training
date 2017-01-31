@@ -1,7 +1,7 @@
 //Properties (Get, Set) and Constructors Methods
 
 /*Get and Set Properties: They're used to access protected attributes and methods inside a class.
-  Example:public class Example
+  Example:public class PropertiesExample
            {
             private string firstAttribute;
             
@@ -17,7 +17,7 @@
             {
              static void Main (string[] args)
              {
-              Example e1 = new Example();
+              PropertiesExample e1 = new PropertiesExample();
               e1.FirstAttribute = "Hello World!";
               
               Console.WriteLine("Your attribute is: " + e1.FirstAttribute );
@@ -25,9 +25,30 @@
             }
 */
 /* Constructor methods: special methods used when instantiating a class(i.e. initilizating an object).They don't return anything. 
-
+   Example: public class ConstructorExample
+            {
+             public string constructorName;
+             public int constructNumber;
+             
+             //get and set properties need to be created here...
+             
+             public ConstructorExample()
+             {
+              constructorName = "My name is Example!!!";
+              constructNumber = 1;
+             }
+             
+             public ConstructorExample(string cName, int cNumber)
+             {
+              cName = constructorName;
+              cNumber = constructorNumber;
+             }
+             
+             //Main Class
+             
 
 */
+
 
 //===========================================================================
 
