@@ -24,7 +24,9 @@
              }
             }
 */
+
 /* Constructor methods: special methods used when instantiating a class(i.e. initilizating an object).They don't return anything. 
+   They can be used to set default attributes to an object.So, every object created from a class will have those default attributes. 
    Example: public class ConstructorExample
             {
              public string constructorName;
@@ -32,7 +34,8 @@
              
              //get and set properties need to be created here...
              
-             public ConstructorExample()
+             public ConstructorExample() //In this example, every object created from the "Constructor Example" class will have this 
+          
              {
               constructorName = "My name is Example!!!";
               constructNumber = 1;
@@ -45,7 +48,11 @@
              }
              
              //Main Class
-             
+             class Program
+             {
+              static void Main(string[] args)
+              {
+               
 
 */
 
