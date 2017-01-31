@@ -1,7 +1,7 @@
 //Properties (Get, Set) and Constructors Methods
 
 /*
-  Get and Set Properties: They're used to access protected attributes and methods inside a class.
+ •Get and Set Properties: They're used to access protected attributes and methods inside a class.
   Syntax -> <visibility><type><same name of it's attribute>{ get { return <attribute>; } set { <attribute> = value; } }
   Example:public class PropertiesExample
            {
@@ -9,8 +9,8 @@
             
             public string FirstAttribute
             {
-             get { return firstAttribute; }
-             set { firstAttribute = value;}
+             get { return firstAttribute; } //This returns the attributes value
+             set { firstAttribute = value; } //This sets an attribute's value
             }
             
             //Main Class
@@ -21,17 +21,17 @@
              {
               PropertiesExample e1 = new PropertiesExample();
               e1.FirstAttribute = "Hello World!"; 
-              // This calls the set property(note that the first letter of "FirstAttribute" must be in upper case in order to 
+              //This calls the set property(note that the first letter of "FirstAttribute" must be in upper case in order to 
               //call the 'set' property.Otherwise, it will try to call the regular attribute, error in the program). 
               
               Console.WriteLine("Your attribute is: " + e1.FirstAttribute); 
-              // This will call the 'get' property (same ruleas calling the 'set' property.) 
+              // This will call the 'get' property (same rule as calling the 'set' property applies here).
              }
             } 
             
 
-   Constructor methods: special methods used when instantiating a class(i.e. initilizating an object).They don't return anything. 
-   They can be used to set default attributes to an object.So, every object created from a class will have those default attributes.
+  •Constructor methods: special methods used when instantiating a class(i.e. initilizating an object).They don't return anything. 
+   They can be used to set default attributes to an object. So, every object created from a class will have those default attributes.
    Syntax -> <visibility><same name of it's class>(<parameters>)
    Example: public class ConstructorExample
             {
@@ -39,16 +39,19 @@
              public int constructNumber;            
              
              public ConstructorExample() //The method's name is the same it's class.           
-             { //In this example, every object created from the "Constructor Example" class will have this attributes
+             { 
               constructorName = "My name is Example!!!";
               constructorNumber = 1;
              }
+             //In this example, every object created from the "Constructor Example" class will have this attributes
+             //as default.
              
-             public ConstructorExample(string cName, int cNumber)
+             public ConstructorExample(string constructorName, int constructorNumber)
              {
               this.constructorName = constructorName;
               this.constructorNumber = constructorNumber;
              }
+             //Through this constructor, you can set the attribute's value you want.
              
              //Main Class
              class Program
@@ -56,7 +59,7 @@
               static void Main(string[] args)
               {
                ConstructorExample e1 = new ConstructorExample();
-               ConstructorExample e2 = new ConstructorExample("My name is Example 2!!!", 2 );
+               ConstructorExample e2 = new ConstructorExample("My name is Example 2!!!", 2);
                Console.WriteLine("What is your name? " + e1.constructorName + "Number: " + e1.constructorNumber);
                Console.WriteLine("What is your name? " + e2.constructorName + "Number: " + e2.constructorNumber);
               }
