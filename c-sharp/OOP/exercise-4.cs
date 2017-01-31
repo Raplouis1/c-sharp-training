@@ -1,6 +1,7 @@
 //Properties (Get, Set) and Constructors Methods
 
 /*Get and Set Properties: They're used to access protected attributes and methods inside a class.
+  Syntax -> <visibility><type><same name of it's attribute>{ get { return <attribute>; } set { <attribute> = value; } }
   Example:public class PropertiesExample
            {
             private string firstAttribute;
@@ -26,25 +27,24 @@
 */
 
 /* Constructor methods: special methods used when instantiating a class(i.e. initilizating an object).They don't return anything. 
-   They can be used to set default attributes to an object.So, every object created from a class will have those default attributes. 
+   They can be used to set default attributes to an object.So, every object created from a class will have those default attributes.
+   Syntax -> <visibility><same name of it's class>(<parameters>)
    Example: public class ConstructorExample
             {
              public string constructorName;
-             public int constructNumber;
+             public int constructNumber;       
              
-             //get and set properties need to be created here...
-             
-             public ConstructorExample() //In this example, every object created from the "Constructor Example" class will have this 
+             public ConstructorExample() //The method's name is the same it's class. 
           
-             {
+             { //In this example, every object created from the "Constructor Example" class will have this attributes
               constructorName = "My name is Example!!!";
               constructNumber = 1;
              }
              
              public ConstructorExample(string cName, int cNumber)
              {
-              cName = constructorName;
-              cNumber = constructorNumber;
+              this.cName = cName;
+              this.cNumber = cNumber;
              }
              
              //Main Class
@@ -52,7 +52,9 @@
              {
               static void Main(string[] args)
               {
-               
+               ConstructorExample e1 = new ConstructorExample();
+               ConstructorExample e2 = new ConstructorExample("My name is Example 2!!!", 2 );
+               e1.
 
 */
 
