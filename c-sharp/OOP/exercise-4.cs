@@ -22,7 +22,7 @@
               PropertiesExample e1 = new PropertiesExample();
               e1.FirstAttribute = "Hello World!"; 
               //This calls the set property(note that the first letter of "FirstAttribute" must be in upper case in order to 
-              //call the 'set' property.Otherwise, it will try to call the regular attribute, error in the program). 
+              //call the 'set' property. Otherwise, it will try to call the regular attribute, the program will not work). 
               
               Console.WriteLine("Your attribute is: " + e1.FirstAttribute); 
               // This will call the 'get' property (same rule as calling the 'set' property applies here).
