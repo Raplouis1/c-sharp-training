@@ -164,8 +164,8 @@ class Program
 //Class Car
 public class Car
 {
- public bool absBrakes;
- public bool airbag;
+ public bool absBrakes = true;
+ public bool airbag = true;
  public int mileage;
  public string model;
  public string color;
@@ -173,8 +173,6 @@ public class Car
  
  public Car() //Default parts and characteristics(every car comes with those.Can be changed later.)
  {
-  absBrakes = true;
-  airbag = true;
   mileage = 0;
  }
  
@@ -184,18 +182,18 @@ public class Car
   this.color = color;
   this.topSpeed = topSpeed;
  }
+
+ public void Status()
+ {
+  Console.WriteLine("ABS Brakes: " + absBrakes);
+  Console.WriteLine("Airbag: " + airbag);
+  Console.WriteLine("Mileage: " + mileage + " miles.");
+  Console.WriteLine("Model: " + model);
+  Console.WriteLine("Color: " + color);
+  Console.WriteLine("Top speed: " + topSpeed + " mph.");
+ }
 }
 
-public void Status()
-{
- Console.WriteLine("ABS Brakes: " + absBreak);
- Console.WriteLine("Airbag: " + airbag);
- Console.WriteLine("Mileage: " + mileage + " miles.");
- Console.WriteLine("Model: " + model);
- Console.WriteLine("Color: " + color);
- Console.WriteLine("Top speed: " + topSpeed " mph.");
-}
- 
  
 //Main class
 
@@ -203,15 +201,13 @@ class Program
 {
  static void Main(string[] args)
  {
-  Car c1 = new Car("GT-R", "Black", 196);
+  Car c1 = new Car("GT-R", "Black", 196); //model, color, top speed
   Car c2 = new Car("370Z", "Blue", 170);
   Car c3 = new Car("Leaf", "White", 110);
   
   c1.Status();
   c2.Status();
   c3.Status();
+  //Those methods show each car characteristics
  }
 }
-
- 
- 
