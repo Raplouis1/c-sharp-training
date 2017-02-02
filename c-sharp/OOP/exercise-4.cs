@@ -169,32 +169,43 @@ public class Car
  public int mileage;
  public string model;
  public string color;
- public int finalMph;
+ public int topSpeed;
  
- public Car() //Default parts and characteristics
+ public Car() //Default parts and characteristics(every car comes with those.Can be changed later.)
  {
   absBrakes = true;
   airbag = true;
   mileage = 0;
  }
  
- public Car(string model, string color, int finalMph) //
+ public Car(string model, string color, int topSpeed) //Must be set by the programmer or the user.
  {
   this.model = model;
   this.color = color;
-  this.finalMph = finalMph;
+  this.topSpeed = topSpeed;
  }
 }
 
+public void Status()
+{
+ Console.WriteLine("ABS Brakes: " + absBreak);
+ Console.WriteLine("Airbag: " + airbag);
+ Console.WriteLine("Mileage: " + mileage + " miles.");
+ Console.WriteLine("Model: " + model);
+ Console.WriteLine("Color: " + color);
+ Console.WriteLine("Top speed: " + topSpeed " mph.");
+}
+ 
+ 
 //Main class
 
 class Program
 {
  static void Main(string[] args)
  {
-  Car c1 = new Car();
-  Car c2 = new Car();
-  Car c3 = new Car();
+  Car c1 = new Car("GT-R", "Black", 196);
+  Car c2 = new Car("370Z", "Blue", 170);
+  Car c3 = new Car("Leaf", "White", 110);
   
   c1.Status();
   c2.Status();
