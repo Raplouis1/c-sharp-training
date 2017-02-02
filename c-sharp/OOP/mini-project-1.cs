@@ -5,8 +5,29 @@
 /*
 Two people (Mary and John) want to put money in a bank account.John opened a savings account to deposit his 300U$ and Mary opened a 
 checking account to deposit 500U$ and then, withdrew 100$ to buy a pair of shoes.
-A bank account has the following attributes: account number, account type(savings or checking), client name, balance, status(opened/closed).
-And it has the following methods: open account, close account, deposit, withdraw, pay monthly fee, 
-constructor new account(status=false, balance=0) and the getters/setters.
+Each account have the following attributes and methods:
+BankAccount //Class name
+//Attributes
++ account number
+# type(checkings/savings)
+- client name
+- balance
+- status(true->account is open / false->account is closed)
+//Methods
+open account(turns 'status' into true / if chose checkings += 50 / if chose savings +=150)
+close account(turns 'status' into false / can't have money in the account or have debits)
+deposit(status must be true)
+withdraw(status must be true / balance must be >= value )
+pay monthly fee(checkings=12 / savings=20)
+constructor new account(status = false, balance = 0)
+getters/setters
+
+So, write a program to create and manage the clients account.
+
+//======================================================
+
+
+
+
 
 
