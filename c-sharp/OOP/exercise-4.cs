@@ -152,3 +152,11 @@ class Program
   You're in the last semester
   */
 }  
+
+//===========================================================================
+/*2-Constructor method exercise.
+ A car industry want a system to register every car it produces.Knowing that every car comes with default parts 
+ and characteristics(ABS brakes, Airbag and Mileage) as well as knowing each car comes with particular parts and characteristics,
+ write a program to register those cars. 
+*/
+
