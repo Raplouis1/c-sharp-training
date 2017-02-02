@@ -171,5 +171,36 @@ public class Car
  public string color;
  public int finalMph;
  
+ public Car() //Default parts and characteristics
+ {
+  absBrakes = true;
+  airbag = true;
+  mileage = 0;
+ }
+ 
+ public Car(string model, string color, int finalMph) //
+ {
+  this.model = model;
+  this.color = color;
+  this.finalMph = finalMph;
+ }
+}
+
+//Main class
+
+class Program
+{
+ static void Main(string[] args)
+ {
+  Car c1 = new Car();
+  Car c2 = new Car();
+  Car c3 = new Car();
+  
+  c1.Status();
+  c2.Status();
+  c3.Status();
+ }
+}
+
  
  
