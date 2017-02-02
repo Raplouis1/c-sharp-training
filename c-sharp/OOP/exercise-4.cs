@@ -154,9 +154,22 @@ class Program
 }  
 
 //===========================================================================
+
 /*2-Constructor method exercise.
  A car industry want a system to register every car it produces.Knowing that every car comes with default parts 
- and characteristics(ABS brakes, Airbag and Mileage) as well as knowing each car comes with particular parts and characteristics,
- write a program to register those cars. 
+ and characteristics(ABS brakes, Airbag and Mileage) as well as knowing each car comes with particular parts and characteristics
+ (model, color, finalMph), write a program to register those cars. 
 */
 
+//Class Car
+public class Car
+{
+ public bool absBrakes;
+ public bool airbag;
+ public int mileage;
+ public string model;
+ public string color;
+ public int finalMph;
+ 
+ 
+ 
