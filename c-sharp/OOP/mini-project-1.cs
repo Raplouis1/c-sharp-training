@@ -22,6 +22,7 @@ BankAccount //Class name
 • deposit (status must be true)
 • withdraw (status must be true / balance must be >= value)
 • pay monthly fee (checkings=12 / savings=20)
+
 • constructor new account (status = false, balance = 0)
 • getters/setters
 
@@ -113,11 +114,16 @@ public class BankAccount
        balance -= 20;
      }
     }
-  }
+  } 
   
-  public void AccountSystemCycle()
+  public void AccountManagementAccount()
   {
-    
+    Console.WriteLine(name + "Account's management system.");
+    Console.WriteLine("Press ");
+    while(key != 'f')
+    {
+      
+    }
   }
   
   public BankAccount()
@@ -158,8 +164,12 @@ class Program
     BankAccount b1 = new BankAccount();
     BankAccount b2 = new BankAccount();
     
+    Console.WriteLine("Welcome.");
+    Console.WriteLine("Manage the first client account: ");
+    
+    b1.AccountManagementSystem();
+    b2.AccountManagementSystem();
     
     
-  }
-  
+  }  
 }
