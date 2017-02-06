@@ -52,8 +52,11 @@ public class BankAccount
   {
     if(balance == 0)
     {
-      
+      status = true;
     }
+  }
+  
+  
   
   
 }
