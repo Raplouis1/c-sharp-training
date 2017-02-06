@@ -17,7 +17,7 @@ BankAccount //Class name
 - status(true->account is open / false->account is closed)
 
 //Methods (in this example, all methods are public)
-• open account (turns 'status' into true / if chose checkings += 50 / if chose savings +=150)
+• open account (turns 'status' into true / if chose checking += 50 / if chose savings +=150)
 • close account (turns 'status' into false / can't have money in the account or have debits)
 • deposit (status must be true)
 • withdraw (status must be true / balance must be >= value)
@@ -36,6 +36,24 @@ public class BankAccount
   private string clientName;
   private int balance;
   private bool status;
+  
+  public OpenAccount()
+  {
+    status = true;
+    if(accountType == 'checking')
+    {
+      balance += 50;
+    }else{
+      balance += 150;
+    }    
+  }
+  
+  public CloseAccount()
+  {
+    if(balance == 0)
+    {
+      
+    }
   
   
 }
