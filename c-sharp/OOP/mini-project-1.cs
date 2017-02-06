@@ -17,7 +17,7 @@ BankAccount //Class name
 - status(true->account is open / false->account is closed)
 
 //Methods (in this example, all methods are public)
-• open account (turns 'status' into true / if chose checking += 50 / if chose savings +=150)
+• open account (turns 'status' into true / chose checking ou savings / if chose checking += 50 / if chose savings +=150)
 • close account (turns 'status' into false / can't have money in the account or have debits)
 • deposit (status must be true)
 • withdraw (status must be true / balance must be >= value)
@@ -37,15 +37,17 @@ public class BankAccount
   private int balance;
   private bool status;
   
-  public void OpenAccount()
+  public void OpenAccount(int accountKey)
   {
     if(status == false)
     {
      status = true;
-     if(accountType == "checking")
+     Console.WriteLine("Type 'checking' for checking account or 'savings' for savings account: ")
+     accountType = Console.ReadLine();
+     if(accountKey == "checking")
      {
-      balance += 50;
-     }else{
+      balance += 50;      
+     }else if(accountKey == "savings"){
       balance += 150;
      }  
     }else{
@@ -58,6 +60,7 @@ public class BankAccount
     if(status == true && balance == 0)
     {
       status = false;
+      Console.WriteLine("Your account is now closed.");
     }
   }
   
