@@ -76,6 +76,7 @@ public class BankAccount
       Console.WriteLine("Type the deposit amount:");
       depositAmount = Convert.ToInt32(Console.ReadLine());
       balance += depositAmount;
+      Console.WriteLine("Your balance is: "+ balance);
     }else{
       Console.WriteLine("Open an account before deposit your money.");
     }      
@@ -90,6 +91,7 @@ public class BankAccount
       if(withdrawAmount > 0 && withdrawAmount <= balance)
       {
         balance -= withdrawAmount;
+        Console.WriteLine("Your balance is: "+ balance);
       }else if(status == false){
         Console.WriteLine("Open an account before deposit your money.");
       }else if(withdrawAmount > balance){
@@ -111,6 +113,11 @@ public class BankAccount
        balance -= 20;
      }
     }
+  }
+  
+  public void AccountSystemCycle()
+  {
+    
   }
   
   public BankAccount()
@@ -150,6 +157,8 @@ class Program
   {
     BankAccount b1 = new BankAccount();
     BankAccount b2 = new BankAccount();
+    
+    
     
   }
   
