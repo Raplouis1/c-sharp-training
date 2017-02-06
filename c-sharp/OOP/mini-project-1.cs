@@ -39,20 +39,25 @@ public class BankAccount
   
   public void OpenAccount()
   {
-    status = true;
-    if(accountType == 'checking')
+    if(status == false)
     {
+     status = true;
+     if(accountType == "checking")
+     {
       balance += 50;
-    }else{
+     }else{
       balance += 150;
-    }    
+     }  
+    }else{
+     Console.WriteLine("Your account is already open.");
+    }
   }
   
   public void CloseAccount()
   {
-    if(balance == 0)
+    if(status == true && balance == 0)
     {
-      status = true;
+      status = false;
     }
   }
   
@@ -62,7 +67,7 @@ public class BankAccount
     {
       Console.WriteLine("Type the deposit amount:");
       amount = Convert.ToInt32(Console.ReadLine());
-      deposit += amount;
+      balance += amount;
     }else{
       Console.WriteLine("Open an account before deposit your money.");
     }      
@@ -72,8 +77,31 @@ public class BankAccount
   {
     if(status == true)
     {
-      Console.WriteLine();
+      Console.WriteLine("Type the amount you want to withdraw:");
       amount = Convert.ToInt32(Console.ReadLine());
+      if(amount > 0 && amount <= balance)
+      {
+        balance -= amount;
+      }else if(status == false){
+        Console.WriteLine("Open an account before deposit your money.");
+      }else if(amount > balance){
+        Console.WriteLine("Not enough money in your account.");        
+      }else{
+        Console.WriteLine("Invalid amount.");
+      }
+    }
+  }
+  
+  public void PayMonthlyFee()
+  {
+    if(status == true)
+    {
+     if(accountType == "checking")
+     {
+       balance -= 12;
+     }else{
+       balance -= 
+     }
     }
   }
   
