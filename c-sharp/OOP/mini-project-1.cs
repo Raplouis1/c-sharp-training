@@ -37,7 +37,7 @@ public class BankAccount
   private int balance;
   private bool status;
   
-  public OpenAccount()
+  public void OpenAccount()
   {
     status = true;
     if(accountType == 'checking')
@@ -48,12 +48,25 @@ public class BankAccount
     }    
   }
   
-  public CloseAccount()
+  public void CloseAccount()
   {
     if(balance == 0)
     {
       status = true;
     }
+  }
+  
+  public void Deposit(int amount)
+  {
+    if(status == true)
+    {
+      Console.WriteLine("Type the deposit amount:");
+      amount = Convert.ToInt32Console.ReadLine();
+      deposit += amount;
+    }else{
+      Console.WriteLine("Open an account before deposit your money.");
+    }
+      
   }
   
   
