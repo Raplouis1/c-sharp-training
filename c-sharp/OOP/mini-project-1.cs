@@ -37,19 +37,20 @@ public class BankAccount
   private int balance;
   private bool status;
   
-  public void OpenAccount(int accountKey)
+  public void OpenAccount()
   {
     if(status == false)
     {
      status = true;
      Console.WriteLine("Type 'checking' for checking account or 'savings' for savings account: ")
      accountType = Console.ReadLine();
-     if(accountKey == "checking")
+     if(accountType == "checking")
      {
       balance += 50;      
-     }else if(accountKey == "savings"){
+     }else if(accountType == "savings"){
       balance += 150;
-     }  
+     }
+      Console.WriteLine("Your account is now open.");
     }else{
      Console.WriteLine("Your account is already open.");
     }
@@ -61,33 +62,37 @@ public class BankAccount
     {
       status = false;
       Console.WriteLine("Your account is now closed.");
+    }else if(balance > 0){
+     Console.WriteLine("Withdraw all your money before close your account.");
+    }else if(balance < 0){
+     Console.WriteLine("You have debits(negative account).Deposit money to finish you debits before close your account.");
     }
   }
   
-  public void Deposit(int amount)
+  public void Deposit(int depositAmount)
   {
     if(status == true)
     {
       Console.WriteLine("Type the deposit amount:");
-      amount = Convert.ToInt32(Console.ReadLine());
-      balance += amount;
+      depositAmount = Convert.ToInt32(Console.ReadLine());
+      balance += depositAmount;
     }else{
       Console.WriteLine("Open an account before deposit your money.");
     }      
   }
   
-  public void Withdraw()
+  public void Withdraw(int withdrawAmount)
   {
     if(status == true)
     {
       Console.WriteLine("Type the amount you want to withdraw:");
-      amount = Convert.ToInt32(Console.ReadLine());
-      if(amount > 0 && amount <= balance)
+      withdrawAmount = Convert.ToInt32(Console.ReadLine());
+      if(withdrawAmount > 0 && withdrawAmount <= balance)
       {
-        balance -= amount;
+        balance -= withdrawAmount;
       }else if(status == false){
         Console.WriteLine("Open an account before deposit your money.");
-      }else if(amount > balance){
+      }else if(withdrawAmount > balance){
         Console.WriteLine("Not enough money in your account.");        
       }else{
         Console.WriteLine("Invalid amount.");
@@ -103,11 +108,37 @@ public class BankAccount
      {
        balance -= 12;
      }else{
-       balance -= 
+       balance -= 20;
      }
     }
   }
   
+  public BankAccount()
+  {
+    status = false;
+    balance = 0;
+  } 
+  
+  public string AccountType
+  {
+    get{return accountType;}
+    set{accountType = value;}
+  }    
+  public string ClientName
+  {
+    get{return clientName;}
+    set{clientName = value;}
+  }
+  public int Balance
+  {
+    get{return balance;}
+    set{balance = value;}
+  }
+  public bool Status
+  {
+    get{return status;}
+    set{status = value;}
+  }
   
   
   
