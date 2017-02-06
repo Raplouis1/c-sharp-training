@@ -107,7 +107,7 @@ public class BankAccount
      if(accountType == "checking")
      {
        balance -= 12;
-     }else{
+     }else if(accountType == "savings"){
        balance -= 20;
      }
     }
@@ -138,10 +138,7 @@ public class BankAccount
   {
     get{return status;}
     set{status = value;}
-  }
-  
-  
-  
+  } 
   
 }
 
@@ -149,6 +146,11 @@ public class BankAccount
 
 class Program
 {
-  
+  static void Main(string[] args)
+  {
+    BankAccount b1 = new BankAccount();
+    BankAccount b2 = new BankAccount();
+    
+  }
   
 }
