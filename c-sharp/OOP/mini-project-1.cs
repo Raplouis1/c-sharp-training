@@ -61,13 +61,22 @@ public class BankAccount
     if(status == true)
     {
       Console.WriteLine("Type the deposit amount:");
-      amount = Convert.ToInt32Console.ReadLine();
+      amount = Convert.ToInt32(Console.ReadLine());
       deposit += amount;
     }else{
       Console.WriteLine("Open an account before deposit your money.");
-    }
-      
+    }      
   }
+  
+  public void Withdraw()
+  {
+    if(status == true)
+    {
+      Console.WriteLine();
+      amount = Convert.ToInt32(Console.ReadLine());
+    }
+  }
+  
   
   
   
