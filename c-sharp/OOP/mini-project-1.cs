@@ -72,8 +72,6 @@ public class BankAccount
   {
     if(status == true)
     {
-      Console.WriteLine("Type the deposit amount:");
-      depositAmount = Convert.ToInt32(Console.ReadLine());
       balance += depositAmount;
       Console.WriteLine("Your balance is: "+ balance);
     }else{
@@ -84,9 +82,7 @@ public class BankAccount
   public void Withdraw(int withdrawAmount)
   {
     if(status == true)
-    {
-      Console.WriteLine("Type the amount you want to withdraw:");
-      withdrawAmount = Convert.ToInt32(Console.ReadLine());
+    {      
       if(withdrawAmount > 0 && withdrawAmount <= balance)
       {
         balance -= withdrawAmount;
@@ -112,18 +108,8 @@ public class BankAccount
        balance -= 20;
      }
     }
-  } 
-  
-  public void AccountManagementAccount()
-  {
-    Console.WriteLine(name + "Account's management system.");
-    Console.WriteLine("Press ");
-    while(key != 'f')
-    {
-      
-    }
-  }
-  
+  }   
+    
   public BankAccount()
   {
     status = false;
