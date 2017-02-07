@@ -38,6 +38,15 @@ public class BankAccount
   private decimal balance;
   private bool status;
   
+  public void AccountInformation()
+  {
+    Console.WriteLine("Name: " + clientName);
+    Console.WriteLine("Account type: " + accountNumber + " account.");
+    Console.WriteLine("Account number" + accountNumber);
+    Console.WriteLine("Balance: " + balance);
+    Console.WriteLine("Status: " + status);    
+  }
+  
   public void OpenAccount()
   {
     if(status == false)
@@ -51,7 +60,7 @@ public class BankAccount
      }
       Console.WriteLine(clientName + ", your account is now open.");
     }else{
-     Console.WriteLine("Your account is already open.");
+     Console.WriteLine(clientName + ", your account is already open.");
     }
   }
   
@@ -147,9 +156,7 @@ class Program
   {
     BankAccount b1 = new BankAccount();
     BankAccount b2 = new BankAccount();
-    b1.clientName = "John";    
-    b1.AccountNumber = 00001;
-        
+            
     Console.WriteLine("ACCOUNT MANAGEMENT SYSTEM.Welcome.");
     Console.WriteLine("\nCreate the first client's account: ");
     Console.WriteLine("Write the client's name: ");
@@ -167,6 +174,12 @@ class Program
     Console.WriteLine("Write the account type (savings or checking): ");
     b2.AccountType = Console.ReadLine();
     
+    b1.OpenAccount("savings");
+    b1.Deposit(300.0m);
+    
+    b2.OpenAccount("checking");
+    b2.Deposit(500.0m);
+    b2.Withdraw(100.0m);
     
     
     
