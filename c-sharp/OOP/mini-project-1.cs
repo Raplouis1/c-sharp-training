@@ -35,14 +35,14 @@ public class BankAccount
   public int accountNumber;
   protected string accountType;
   private string clientName;
-  private decimal balance;
+  private int balance;
   private bool status;
   
   public void AccountInformation()
   {
     Console.WriteLine("\nName: " + clientName);
-    Console.WriteLine("Account type: " + accountNumber + " account.");
-    Console.WriteLine("Account number" + accountNumber);
+    Console.WriteLine("Account type: " + accountType + " account.");
+    Console.WriteLine("Account number: " + accountNumber);
     Console.WriteLine("Balance: " + balance);
     Console.WriteLine("Status: " + status);    
   }
@@ -52,10 +52,10 @@ public class BankAccount
     if(status == false)
     {
      status = true;     
-     if(accountType == "checking")
+     if(accountType == "Checking")
      {
       balance += 50;      
-     }else if(accountType == "savings"){
+     }else if(accountType == "Savings"){
       balance += 150;
      }
       Console.WriteLine(clientName + ", your account is now open.");
@@ -77,7 +77,7 @@ public class BankAccount
     }
   }
   
-  public void Deposit(decimal depositAmount)
+  public void Deposit(int depositAmount)
   {
     if(status == true)
     {
@@ -88,7 +88,7 @@ public class BankAccount
     }      
   }
   
-  public void Withdraw(decimal withdrawAmount)
+  public void Withdraw(int withdrawAmount)
   {
     if(status == true)
     {      
@@ -110,21 +110,22 @@ public class BankAccount
   {
     if(status == true)
     {
-     if(accountType == "checking")
+     if(accountType == "Checking")
      {
        balance -= 12;
-     }else if(accountType == "savings"){
+     }else if(accountType == "Savings"){
        balance -= 20;
      }
     }
   }   
     
-  public BankAccount()
+  public BankAccount() //Constructor method
   {
     status = false;
     balance = 0;
   } 
   
+  //Getters and setters properties
   public string AccountType
   {
     get{return accountType;}
@@ -179,5 +180,29 @@ class Program
 
     b1.AccountInformation();
     b2.AccountInformation();
-  }  
+  }
+  /*Output:
+  John, your account is now open.
+  Mary, your account is now open.
+  John, your balance is: 450
+  John, your balance is: 0
+  John, your account is now closed.
+  Mary, your balance is: 550
+  Mary, your balance is: 450
+  Mary, your balance is: 0
+  Mary, your account is now closed.
+
+  Name: John
+  Account type: Savings account.
+  Account number: 102
+  Balance: 0
+  Status: False
+
+  Name: Mary
+  Account type: Checking account.
+  Account number: 102
+  Balance: 0
+  Status: False
+  */
 }
+
