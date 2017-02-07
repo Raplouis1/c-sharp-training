@@ -150,12 +150,18 @@ class Program
     b1.clientName = "John";    
     b1.AccountNumber = 00001;
         
-    Console.WriteLine("Welcome.");
-    Console.WriteLine("Create the first client's account: ");
+    Console.WriteLine("ACCOUNT MANAGEMENT SYSTEM.Welcome.");
+    Console.WriteLine("\nCreate the first client's account: ");
     Console.WriteLine("Write the client's name: ");
     b1.clientName = Console.ReadLine();
     Console.WriteLine("Write the client's number: ");
     b1.ClientNumber = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Write the account type (savings or checking)");
+    b1.AccountType = Console.ReadLine();
+    Console.WriteLine("\nCreate the second client's account: ");
+    Console.WriteLine("Write the client's name: ");
+    b2.clientName = Console.ReadLine();
+    
     
     
     
