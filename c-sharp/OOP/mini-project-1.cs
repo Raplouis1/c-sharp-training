@@ -35,7 +35,7 @@ public class BankAccount
   public int accountNumber;
   protected string accountType;
   private string clientName;
-  private int balance;
+  private decimal balance;
   private bool status;
   
   public void OpenAccount()
@@ -68,7 +68,7 @@ public class BankAccount
     }
   }
   
-  public void Deposit(int depositAmount)
+  public void Deposit(decimal depositAmount)
   {
     if(status == true)
     {
@@ -79,7 +79,7 @@ public class BankAccount
     }      
   }
   
-  public void Withdraw(int withdrawAmount)
+  public void Withdraw(decimal withdrawAmount)
   {
     if(status == true)
     {      
@@ -126,7 +126,7 @@ public class BankAccount
     get{return clientName;}
     set{clientName = value;}
   }
-  public int Balance
+  public decimal Balance
   {
     get{return balance;}
     set{balance = value;}
@@ -147,8 +147,17 @@ class Program
   {
     BankAccount b1 = new BankAccount();
     BankAccount b2 = new BankAccount();
+    b1.clientName = "John";    
+    b1.AccountNumber = 00001;
+        
+    Console.WriteLine("Welcome.");
+    Console.WriteLine("Create the first client's account: ");
+    Console.WriteLine("Write the client's name: ");
+    b1.clientName = Console.ReadLine();
+    Console.WriteLine("Write the client's number: ");
+    b1.ClientNumber = Convert.ToInt32(Console.ReadLine());
     
-
+    
     
     
   }  
