@@ -42,9 +42,7 @@ public class BankAccount
   {
     if(status == false)
     {
-     status = true;
-     Console.WriteLine("Type 'checking' for checking account or 'savings' for savings account: ")
-     accountType = Console.ReadLine();
+     status = true;     
      if(accountType == "checking")
      {
       balance += 50;      
@@ -164,11 +162,7 @@ class Program
     BankAccount b1 = new BankAccount();
     BankAccount b2 = new BankAccount();
     
-    Console.WriteLine("Welcome.");
-    Console.WriteLine("Manage the first client account: ");
-    
-    b1.AccountManagementSystem();
-    b2.AccountManagementSystem();
+
     
     
   }  
