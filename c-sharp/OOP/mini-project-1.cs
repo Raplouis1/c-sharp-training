@@ -49,7 +49,7 @@ public class BankAccount
      }else if(accountType == "savings"){
       balance += 150;
      }
-      Console.WriteLine("Your account is now open.");
+      Console.WriteLine(clientName + ", your account is now open.");
     }else{
      Console.WriteLine("Your account is already open.");
     }
@@ -60,11 +60,11 @@ public class BankAccount
     if(status == true && balance == 0)
     {
       status = false;
-      Console.WriteLine("Your account is now closed.");
+      Console.WriteLine(clientName + ", your account is now closed.");
     }else if(balance > 0){
-     Console.WriteLine("Withdraw all your money before close your account.");
+     Console.WriteLine(clientName + ", withdraw all your money before close your account.");
     }else if(balance < 0){
-     Console.WriteLine("You have debits(negative account).Deposit money to finish you debits before close your account.");
+     Console.WriteLine(clientName + ", you have debits(negative account).Deposit money to finish you debits before close your account.");
     }
   }
   
@@ -73,9 +73,9 @@ public class BankAccount
     if(status == true)
     {
       balance += depositAmount;
-      Console.WriteLine("Your balance is: "+ balance);
+      Console.WriteLine(clientName + ", your balance is: "+ balance);
     }else{
-      Console.WriteLine("Open an account before deposit your money.");
+      Console.WriteLine(clientName + ", open an account before deposit your money.");
     }      
   }
   
@@ -86,11 +86,11 @@ public class BankAccount
       if(withdrawAmount > 0 && withdrawAmount <= balance)
       {
         balance -= withdrawAmount;
-        Console.WriteLine("Your balance is: "+ balance);
+        Console.WriteLine(clientName + ", your balance is: " + balance);
       }else if(status == false){
-        Console.WriteLine("Open an account before deposit your money.");
+        Console.WriteLine(clientName + ", open an account before deposit your money.");
       }else if(withdrawAmount > balance){
-        Console.WriteLine("Not enough money in your account.");        
+        Console.WriteLine(clientName + ", not enough money in your account.");        
       }else{
         Console.WriteLine("Invalid amount.");
       }
@@ -154,13 +154,19 @@ class Program
     Console.WriteLine("\nCreate the first client's account: ");
     Console.WriteLine("Write the client's name: ");
     b1.clientName = Console.ReadLine();
-    Console.WriteLine("Write the client's number: ");
-    b1.ClientNumber = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Write the account type (savings or checking)");
+    Console.WriteLine("Write the account's number: ");
+    b1.AccountNumber = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Write the account type (savings or checking): ");
     b1.AccountType = Console.ReadLine();
+    
     Console.WriteLine("\nCreate the second client's account: ");
     Console.WriteLine("Write the client's name: ");
     b2.clientName = Console.ReadLine();
+    Console.WriteLine("Write the account's number: ");
+    b2.AccountNumber = Convert.ToInt32(Console.ReadLine());
+    Console.WriteLine("Write the account type (savings or checking): ");
+    b2.AccountType = Console.ReadLine();
+    
     
     
     
