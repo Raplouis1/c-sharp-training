@@ -40,7 +40,7 @@ public class BankAccount
   
   public void AccountInformation()
   {
-    Console.WriteLine("Name: " + clientName);
+    Console.WriteLine("\nName: " + clientName);
     Console.WriteLine("Account type: " + accountNumber + " account.");
     Console.WriteLine("Account number" + accountNumber);
     Console.WriteLine("Balance: " + balance);
@@ -174,12 +174,25 @@ class Program
     Console.WriteLine("Write the account type (savings or checking): ");
     b2.AccountType = Console.ReadLine();
     
-    b1.OpenAccount("savings");
+    b1.AccountInformation();
+    b1.OpenAccount();
+    b1.PayMonthlyFee();
     b1.Deposit(300.0m);
+    b1.PayMonthlyFee();
+    b1.Withdraw(430.0m);
+    b1.CloseAccount();
+    b1.AccountInformation();
     
-    b2.OpenAccount("checking");
+    b2.AccountInformation();
+    b2.OpenAccount();
+    b2.PayMonthlyFee();
     b2.Deposit(500.0m);
+    b2.PayMonthlyFee();
     b2.Withdraw(100.0m);
+    b2.PayMonthlyFee();
+    b2.Withdraw(414.0m);
+    b2.CloseAccount();
+    b2.AccountInformation();
     
     
     
