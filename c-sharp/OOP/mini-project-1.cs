@@ -155,48 +155,29 @@ class Program
   static void Main(string[] args)
   {
     BankAccount b1 = new BankAccount();
-    BankAccount b2 = new BankAccount();
-            
-    Console.WriteLine("ACCOUNT MANAGEMENT SYSTEM.Welcome.");
-    Console.WriteLine("\nCreate the first client's account: ");
-    Console.WriteLine("Write the client's name: ");
-    b1.clientName = Console.ReadLine();
-    Console.WriteLine("Write the account's number: ");
-    b1.AccountNumber = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Write the account type (savings or checking): ");
-    b1.AccountType = Console.ReadLine();
-    
-    Console.WriteLine("\nCreate the second client's account: ");
-    Console.WriteLine("Write the client's name: ");
-    b2.clientName = Console.ReadLine();
-    Console.WriteLine("Write the account's number: ");
-    b2.AccountNumber = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine("Write the account type (savings or checking): ");
-    b2.AccountType = Console.ReadLine();
-    
-    b1.AccountInformation();
+    b1.accountNumber = 102;
+    b1.AccountType = "Savings";
+    b1.ClientName = "John";
     b1.OpenAccount();
-    b1.PayMonthlyFee();
-    b1.Deposit(300.0m);
-    b1.PayMonthlyFee();
-    b1.Withdraw(430.0m);
-    b1.CloseAccount();
-    b1.AccountInformation();
-    
-    b2.AccountInformation();
+
+    BankAccount b2 = new BankAccount();
+    b2.accountNumber = 102;
+    b2.AccountType = "Checking";
+    b2.ClientName = "Mary";
     b2.OpenAccount();
+
+    b1.Deposit(300);
+    b1.PayMonthlyFee();
+    b1.Withdraw(430);
+    b1.CloseAccount();
+
+    b2.Deposit(500);
+    b2.Withdraw(100);
     b2.PayMonthlyFee();
-    b2.Deposit(500.0m);
-    b2.PayMonthlyFee();
-    b2.Withdraw(100.0m);
-    b2.PayMonthlyFee();
-    b2.Withdraw(414.0m);
+    b2.Withdraw(438);
     b2.CloseAccount();
+
+    b1.AccountInformation();
     b2.AccountInformation();
-    
-    
-    
-    
-    
   }  
 }
