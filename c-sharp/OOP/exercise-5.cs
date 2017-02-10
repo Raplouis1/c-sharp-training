@@ -58,10 +58,17 @@ Abstract methods: do not are "developed" inside the interface, but inside the cl
  -get/set Tocando()
  ----------------------
 
+•Interface syntax: 
+ interface I<<name>>
+ {
+  <<type>><<Method name>>();
+ }
 
 */
 //==========================================================
 
 //Making a C# program using the remote control example above.
+
+
 
 
