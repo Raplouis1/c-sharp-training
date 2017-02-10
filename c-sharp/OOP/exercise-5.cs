@@ -15,23 +15,47 @@ So, the manufacturer puts a cover(capsule) with buttons(interface) so the costum
 be damaged by it.
 Using the UML diagram, it become even more clear how the interface works in C#:
 
------------------------- <===========(class RemoteControl implements)====== ------------------------
-|    <<interface>>     |                                                    |      RemoteControl   |
-|     Controller       |
-------------------------
------------------------- 
- MurnOn()                
- TurnOff()
- OpenMenu()
- CloseMenu()
- VolumeUp()
- VolumeDown()
- MuteOn()
- MuteOff()
- Play()
- Pause()
+------------------------  
+|    <<interface>>     |                                                    
+|     Controller       | Interface's name                                   
+------------------------                                                     
+------------------------                                                     
+ + TurnOn()               Abstract methods                                               
+ + TurnOff()                                                                  
+ + OpenMenu()                                                                    
+ + CloseMenu()                                                                 
+ + VolumeUp()
+ + VolumeDown()
+ + MuteOn()
+ + MuteOff()
+ + Play()
+ + Pause()
 ------------------------
 An interface doesn't have attributes only Abstract methods.
+
+/\(class RemoteControl implements)/\
+------------------------
+|     RemoteControl    | Class's name
+------------------------
+-volume                  Attributes
+-ligado
+-tocando
+------------------------
+ +TurnOn()               The interface methods are implemented here                                                 
+ +TurnOff()                                                                  
+ +OpenMenu()                                                                    
+ +CloseMenu()                                                                 
+ +VolumeUp()
+ +VolumeDown()
+ +MuteOn()
+ +MuteOff()
+ +Play()
+ +Pause()
+ -get/set Volume()
+ -get/set Ligado()
+ -get/set Tocando()
+ ----------------------
+
 
 */
 //==========================================================
