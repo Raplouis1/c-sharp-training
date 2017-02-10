@@ -78,6 +78,24 @@ Abstract methods: do not are "developed" inside the interface, but inside the cl
 
 //Making a C# program using the remote control example above.
 
+//Interface
+interface IController
+{
+ 
+}
+
+//Class 
+class RemoteControl : IController
+{
+ 
+}
+
+//Main class
+static void Main(string[] args)
+{
+ 
+}
+
 
 
 
