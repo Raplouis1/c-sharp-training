@@ -31,7 +31,9 @@ Using the UML diagram, it become even more clear how the interface works in C#:
  + Play()
  + Pause()
 ------------------------
-An interface doesn't have attributes only Abstract methods.
+An interface doesn't have attributes only abstract methods.
+Abstract methods: do not are "developed" inside the interface, but inside the class that it will be implemented.
+ the interface just indicates what methods it will have.
 
 /\(class RemoteControl implements)/\
 ------------------------
@@ -51,7 +53,7 @@ An interface doesn't have attributes only Abstract methods.
  +MuteOff()
  +Play()
  +Pause()
- -get/set Volume()
+ -get/set Volume()     Properties
  -get/set Ligado()
  -get/set Tocando()
  ----------------------
@@ -59,3 +61,7 @@ An interface doesn't have attributes only Abstract methods.
 
 */
 //==========================================================
+
+//Making a C# program using the remote control example above.
+
+
