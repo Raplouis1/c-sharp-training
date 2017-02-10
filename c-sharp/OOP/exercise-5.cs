@@ -62,6 +62,8 @@ Abstract methods: do not are "developed" inside the interface, but inside the cl
  interface I<<name>>
  {
   <<return type>><<Abstract Method's Name>>();
+  //properties and etc
+  
  }
  
  class <<class name>> : <<interface's name>>
