@@ -81,14 +81,14 @@ Abstract methods: do not are "developed" inside the interface, but inside the cl
 //Interface
 interface IController
 {
-  void Ligar();
-  void Desligar();
-  void AbrirMenu();
-  void FecharMenu();
-  void MaisVolume();
-  void MenosVolume();
-  void LigarMudo();
-  void DesligarMudo();
+  void TurnOn();
+  void TurnOff();
+  void OpenMenu();
+  void CloserMenu();
+  void VolumeUp();
+  void VolumeDown();
+  void MuteOn();
+  void MuteOff();
   void Play();
   void Pause();
 }
