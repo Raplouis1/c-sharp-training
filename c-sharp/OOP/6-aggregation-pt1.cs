@@ -2,15 +2,10 @@
 
 class Warrior
 {
-   private string name;
-   private string nationality;
-   private int age;
-   private float height;
-   private float weight;
-   private string warriorClass;
-   private int wins;
-   private int defeats;
-   private int draws;
+   private string name, nationality, warriorClass;   
+   private int age, wins, defeats, draws;
+   private float height, weight;  
+   
    
    //Constructor method
    public Warrior(string name, string nationality, int age, float height, float weight, int wins, int defeats, int draws)
