@@ -110,6 +110,31 @@ class Warrior
   {
     Draws += 1;
   }
-  
-   
+  public void Announcement()
+  {
+     Console.WriteLine("Fighter: " + Nome);
+     Console.WriteLine("From: " + Nationality);
+     Console.WriteLine(Age + " years old");
+     Console.WriteLine(Height + "m");
+     Console.WriteLine(Weight + "kg");
+     Console.WriteLine(Wins + " wins.");
+     Console.WriteLine(Defeats + " defeats.");
+     Console.WriteLine(Draws + " draws");        
+  }
+  public void Status()
+  {
+     Console.WriteLine(Name);
+     Console.WriteLine(WarriorClass);
+     Console.WriteLine(Wins);
+     Console.WriteLine(Defeats);
+     Console.WriteLine(Draws);     
+  }   
+}
+
+//==============================================================
+
+//Main class
+static void Main(string[] args)
+{
+   Warrior w[] = new Warrior[6];//6 is the amount of items we can put inside the array
 }
