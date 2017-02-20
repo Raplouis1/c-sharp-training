@@ -152,7 +152,7 @@ static void Main(string[] args)
    From: Japan
    31 years old
    1.75m
-   68.9kg
+   67kg
    11 wins.
    2 defeats.
    1 draws
