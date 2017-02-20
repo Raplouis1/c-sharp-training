@@ -116,7 +116,7 @@ class Warrior
   }
   public void Status()
   {
-     Console.WriteLine(Name);
+     Console.WriteLine("\n" + Name);
      Console.WriteLine(WarriorClass);
      Console.WriteLine(Wins);
      Console.WriteLine(Defeats);
@@ -130,14 +130,37 @@ class Warrior
 static void Main(string[] args)
 {
    Warrior[] w = new Warrior[6];//6 is the amount of items we can put inside the array
-   
+   //Syntax: Class[<<indicate it is an array>>] objectName = new Class[<<size of the array>>]
+   //An array starts with 0. Example: string[] name = new string[6] / (6 items = 0, 1, 2, 3, 4, 5)
    w[0] = new Warrior("Ninja", "Japan", 31, 1.75f, 68.9f, 11, 2, 1);
    w[1] = new Warrior("Capoeira", "Brazil", 29, 1.68f, 57.8f, 14, 2, 3);
    w[2] = new Warrior("Marine", "USA", 35, 1.9f, 80.9f, 12, 2, 1);
    w[3] = new Warrior("Kung Fu", "China", 28, 1.93f, 81.6f, 13, 0, 2);
    w[4] = new Warrior("Krav Maga", "Israel", 37, 1.7f, 119.3f, 5, 4, 3);
    w[5] = new Warrior("Sumo", "Japan", 30, 1.6f, 120f, 12, 2, 4);
+   //Syntax: objectName[<<array item number(starts with 0)>>] = new Class(<<class attribute's value>>);
    
+   //Here, you can put the methods and properties(get/set)
+   //Example: warrior 1 (w[0]) lost some weight:
+   w[0].Weight = 67f;   
+   w[0].Announcement();
+   w[0].Status();
+   /*
+   •Output:
    
+   Fighter: Ninja
+   From: Japan
+   31 years old
+   1.75m
+   68.9kg
+   11 wins.
+   2 defeats.
+   1 draws
    
+   Ninja
+   Lightweight.
+   11
+   2
+   1   
+   */   
 }
