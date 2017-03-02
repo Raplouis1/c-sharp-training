@@ -4,7 +4,16 @@
  w[0] = new Warrior("Ninja", "Japan", 31, 1.75f, 68.9f, 11, 2, 1); //Warrior 1
  w[1] = new Warrior("Capoeira", "Brazil", 29, 1.68f, 57.8f, 14, 2, 3); //Warrior 2
  We need to create a class to make them fight.The class is called "Fight":
- 
- 
+ -Class: Fight
+ -Attributes(- is private ): 
+  -adversary(who was challenged): abstract 
+  -challenger(who asked for a fight): abstract
+  -rounds: int
+  -fightApproved: bool //Show if this fights is according with the tournament rules
+ -Methods:
+  -ArrangeFight()
+  -FightNow()
+   
+   
 
 */
