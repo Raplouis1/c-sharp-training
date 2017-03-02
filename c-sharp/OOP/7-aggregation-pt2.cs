@@ -11,9 +11,14 @@
   -rounds: int
   -fightApproved: bool //Show if this fights is according with the tournament rules
  -Methods:
-  -ArrangeFight()
-  -FightNow()
-   
+  +ArrangeFight()
+  +FightNow()
+  setters/getters
+  
+  -The aggregation is represented in uml by an arrow with the diamond geometrical shape as tip:
+             (-->Warrior(s) disputes one(or more) Fight(s)-->)    
+   Warrior ---------------------------------------------------<> Fight
+                (<--a Fight is disputed by Warrior(s)<--)
    
 
 */
