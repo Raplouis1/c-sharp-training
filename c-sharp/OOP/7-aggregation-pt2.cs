@@ -19,6 +19,46 @@
              (-->Warrior(s) disputes one(or more) Fight(s)-->)    
    Warrior ---------------------------------------------------<> Fight
                 (<--a Fight is disputed by Warrior(s)<--)
-   
+   i.e. class B(Fight) has one (or more) attributes from class A(Warrior).This is aggregation.
 
 */
+
+//----------------------------------------------------------------------------------
+
+//Now, we're going to create our class Fight:
+
+class Fight
+{
+ //Attributes
+ private 
+ private
+ private int rounds;
+ private bool fightApproved;
+ 
+ //Methods
+ public void ArrangeFight()
+ {
+ }
+ public void FightNow()
+ {
+  
+ }
+ //Setters and Getters
+ public Warrior
+ {
+ }
+ public Warrior
+ {
+ }
+ public int Rounds
+ {
+  get{return rounds;}
+  set{rounds = value;}
+ }
+ public bool FightApproved
+ {
+  get{return fightApproved;}
+  set{fightApproved = value;}
+ }
+ 
+}
