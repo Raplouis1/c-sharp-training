@@ -64,6 +64,18 @@ class Fight
    //Main class have this: 
    //Random random = new Random();
    int winner = random.Next(0, 3);//3 is not included - 0 is draw, 1 adversary wins and 2 chalenger wins
+   switch(winner)
+   {
+    case 1:
+     Console.WriteLine("Draw");
+     break;
+    case 2:
+     Console.WriteLine("Adversary win.");
+     break;
+    case 3:
+     Console.WriteLine("Challenger win.");
+     break;
+   }
    
   }else{
    Console.WriteLine("This fight cannot happen!!!");
