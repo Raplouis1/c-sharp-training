@@ -68,12 +68,18 @@ class Fight
    {
     case 1:
      Console.WriteLine("Draw");
+     adversary.DrawFight();
+     challenger.DrawFight();
      break;
     case 2:
      Console.WriteLine("Adversary win.");
+     adversary.WinFight();
+     challenger.LostFight();
      break;
     case 3:
      Console.WriteLine("Challenger win.");
+     challenger.WinFight();
+     adversary.LostFight();
      break;
    }
    
