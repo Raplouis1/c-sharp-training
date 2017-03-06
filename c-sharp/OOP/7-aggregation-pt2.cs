@@ -36,19 +36,19 @@
 class Fight
 {
  //Attributes
- private 
- private
+ private Warrior adversary;
+ private Warrior challenger;
  private int rounds;
  private bool fightApproved;
  
  //Methods
- public void ArrangeFight(w[0], w[1])
+ public void ArrangeFight(Warrior w1, Warrior w2)
  {
-  if(w[0].WarriorClass == w[1].WarriorClass && w[0] != w[1])
+  if(w1.WarriorClass == w1.WarriorClass && w1 != w2)
   {
    fightApproved = true;
-   adversary = w[0];
-   challenger = w[1];
+   adversary = w1;
+   challenger = w2;
   }else{
    fightApproved = false;
    adversary = null;
@@ -60,24 +60,24 @@ class Fight
   if(fightApproved == true)
   {
    adversary.Announcement();
-   challenger.Announcement();
-   //Main class have this: 
-   //Random random = new Random();
+   challenger.Announcement();    
+   Random random = new Random();
    int winner = random.Next(0, 3);//3 is not included - 0 is draw, 1 adversary wins and 2 chalenger wins
+   Console.WriteLine("---Fight Result---");
    switch(winner)
    {
-    case 1:
-     Console.WriteLine("Draw");
+    case 0:
+     Console.WriteLine("Draw!!!");
      adversary.DrawFight();
      challenger.DrawFight();
      break;
-    case 2:
-     Console.WriteLine("Adversary win.");
+    case 1:
+     Console.WriteLine("Adversary win." + adversary.Name);
      adversary.WinFight();
      challenger.LostFight();
      break;
-    case 3:
-     Console.WriteLine("Challenger win.");
+    case 2:
+     Console.WriteLine("Challenger win." + challenger.Name);
      challenger.WinFight();
      adversary.LostFight();
      break;
@@ -110,8 +110,7 @@ class Fight
 
 //Main class
 static void Main(string[] args)
-{
-   Random random = new Random();
+{   
    
    Warrior[] w = new Warrior[6];
    w[0] = new Warrior("Ninja", "Japan", 31, 1.75f, 68.9f, 11, 2, 1);
@@ -121,7 +120,41 @@ static void Main(string[] args)
    w[4] = new Warrior("Krav Maga", "Israel", 37, 1.7f, 119.3f, 5, 4, 3);
    w[5] = new Warrior("Sumo", "Japan", 30, 1.6f, 120f, 12, 2, 4);
    
-   Tournament01 = new Fight();
-   Tournament01.ArrangeFight(w[0], w[1]);
-   Tournamente01.FightNow();
+   Fight F1 = new Fight();
+   F1.ArrangeFight(w[0], w[1]);
+   F1.FightNow();
+   w[0].Status();
+   w[1].Status();
 }
+/* OUTPUT:
+---Adversary---
+Fighter: Ninja
+From: Japan
+31 years old
+1.75m
+68.9kg
+11 wins.
+2 defeats.
+1 draws
+---Challenger---
+Fighter: Capoeira
+From: Brazil
+29 years old
+1.68m
+57.8kg
+14 wins.
+2 defeats.
+3 draws
+---Fight Result---
+Adversary Wins!!!Ninja
+Ninja
+Lightweight.
+12
+2
+1
+Capoeira
+Lightweight.
+14
+3
+3
+*/
