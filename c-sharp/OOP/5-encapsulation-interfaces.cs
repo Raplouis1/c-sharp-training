@@ -96,14 +96,131 @@ interface IController
 //Class 
 class RemoteControl : IController
 {
-    
+    private int volume;
+    private bool on;
+    private bool playing;
+
+    public RemoteControl()
+    {
+         volume = 50;
+         on = false;
+         playing = false;
+    }
+
+    private int Volume
+    {
+      get
+            {
+                return volume;
+            }
+            set
+            {
+                volume = value;
+            }
+        }
+        private bool On
+        {
+            get
+            {
+                return on;
+            }
+            set
+            {
+                on = value;
+            }
+        }
+        private bool Playing
+        {
+            get
+            {
+                return playing;
+            }
+            set
+            {
+                playing = value;
+            }
+        }
+
+        public void TurnOn()
+        {
+            On = true;
+        }
+        public void TurnOff()
+        {
+            On = false;
+        }
+        public void OpenMenu()
+        {
+            int i;
+            Console.WriteLine("Is it on?" + On);
+            Console.WriteLine("Is it playing?" + Playing);
+            Console.WriteLine("Volume: " + Volume);
+            for(i=0; i <= Volume; i+=10)
+            {
+                Console.Write("|");
+            }
+            
+        }
+        
+        public void CloseMenu()
+        {
+            Console.WriteLine("Closing menu.");
+        }
+        public void VolumeUp()
+        {
+            if(On)
+            {
+                Volume++;
+            }
+        }
+        public void VolumeDown()
+        {
+            if(On)
+            {
+                Volume--;
+            }
+        }
+        public void MuteOn()
+        {
+            if(On && Volume > 0)
+            {
+                Volume = 0;
+            }
+        }
+        public void MuteOff()
+        {
+            if(On && Volume == 0)
+            {
+                Volume = 50;
+            }
+        }
+        public void Play()
+        {
+            if(On && !Playing)
+            {
+                Playing = true;
+            }
+        }
+        public void Pause()
+        {
+            if(On && Playing)
+            {
+                Playing = false;
+            }
+        }
+    } 
  
 }
 
 //Main class
 static void Main(string[] args)
 {
- 
+   RemoteControl r1 = new RemoteControl();
+   r1.TurnOn();
+   r1.VolumeUp();
+   r1.MuteOn();
+   r1.OpenMenu();
+   r1.CloseMenu();
 }
 
 
