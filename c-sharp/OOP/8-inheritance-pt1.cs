@@ -10,10 +10,10 @@
    name
    age
    sex 
-   studentNumber
+   enrolled
    course
    Birthday()
-   Study()
+   DropOutCourse()
    
   •Professor:
    name
@@ -22,7 +22,7 @@
    speciality
    salary
    Birthday()
-   GiveClass()
+   SalaryRaise()
    
   •Secretary:
    name
