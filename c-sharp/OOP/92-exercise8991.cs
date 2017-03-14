@@ -13,7 +13,7 @@
   -studentNumber
   -course
   +PayTuiton()
- •StudentWithScholarship: (implements Student and not Person but receives the characteristc of Person through Student)
+ •StudentWithScholarship: (implements Student and not Person but receives the characteristics of Person through Student)
   -scholarship
   +ExtendScholarship()  
   +PayTuition() @Override(As this student has scholarship, he will pay a different tuition price, so we need to override the previous
