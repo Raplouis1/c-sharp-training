@@ -10,7 +10,7 @@
  Notes:
  
  -Methods in C# are by default "final".So, if you want the subclasses to override it, you need to put the word "virtual" in the
-  base class method.
+  base class' method.
   -Example:
    public class Example
    {
