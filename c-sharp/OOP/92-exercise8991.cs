@@ -12,7 +12,7 @@
  •Visitor:(implements Person)
   (Only receives the characteristics from Person)
  
- •CommonStudent:(implements Person)
+ •Student:(implements Person)
   -studentNumber
   -course
   +PayTuiton()
