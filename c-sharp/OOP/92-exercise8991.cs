@@ -11,7 +11,10 @@
  
  •Visitor:(implements Person)
   (Only receives the characteristics from Person)
- 
+ •Professor: (implements Person)
+  -speciality
+  -salary
+  +SalaryRaise() 
  •Student:(implements Person)
   -studentNumber
   -course
@@ -21,7 +24,10 @@
   -scholarship
   +ExtendScholarship()  
   +PayTuition() @Override(As this student has scholarship, he will pay a different tuition price, so we need to override the previous
-  tuition payment Method).
+  tuition payment Method)
+ •TechnicalStudent: (implements Student)
+  -professionalCertificateNumber
+  +Practice()
   
   
  
