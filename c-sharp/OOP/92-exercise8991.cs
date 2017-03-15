@@ -2,17 +2,21 @@
 
 /*
 ••Using the concepts learned in the exercises 8, 9 and 91, we're gonna to create a program with the following classes:
- •Person:
+ 
+ •Person(abstract):
   -name
   -age
   -sex
-  +Birthday()
+  +Birthday()(final)
+ 
  •Visitor:(implements Person)
   (Only receives the characteristics from Person)
- •Student:(implements Person)
+ 
+ •CommonStudent:(implements Person)
   -studentNumber
   -course
   +PayTuiton()
+
  •StudentWithScholarship: (implements Student and not Person but receives the characteristics of Person through Student)
   -scholarship
   +ExtendScholarship()  
