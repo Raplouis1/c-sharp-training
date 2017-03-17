@@ -29,9 +29,8 @@
    }
    -The method above have 3 arguments(term, n1, n2) and 3 types (int, float, float) and it is different from the two mthods above.
  
- •There are two kinds of polymorphysm:
-  -Override
-  -Overload
+ •These are them most common polymorphism kinds:
+  -Override and Overload
   
   •Override:
    
