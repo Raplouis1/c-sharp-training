@@ -43,13 +43,53 @@
    abstract class Animal
    {
       private float weight;
-      private float age;
+      private int age;
       private int limbs;
      
       //getters/setters here
      
       //These methods below are abstract i.e. they aren't implemented in the superclass
-      public void Move();
-      public void Eat();
-      public void Sound();
+      public abstract void Move();
+      public abstract void Eat();
+      public abstract void Sound();
    }
+
+//Subclasses (mammal, reptile, fish, bird)
+
+ class Mammal : Animal
+ {
+  private string furColor;
+  //getters/setters here
+ }
+ 
+ class Reptile : Animal
+ {
+  private string scaleColor;
+  //getters/setters here
+ }
+ 
+ class Fish : Animal
+ {
+  private string scaleColor;
+  //getters/setters here
+  public void makeBubble()
+  {
+    Console.WriteLine("Made a bubble.");
+  }
+ }
+ 
+ class Bird : Animal
+ {
+   private string featherColor;
+   //getters/setters here
+   public void makeNest()
+   {
+    Console.WriteLine("Made a nest.");
+   }
+ }
+ 
+
+
+
+
+
