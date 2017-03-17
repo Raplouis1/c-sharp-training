@@ -2,7 +2,7 @@
 •Polymorphism: word that comes from Greek language (Poly = "many, much", Morphos = "shape, form") meaning 
  "something that can have multiple shapes/forms and/or behaviors".
  
- •Method signature: 
+•Method signature: 
   -Every method can or cannot receive arguments(parameters). The quantity and types of it's arguments will define
   it's signature.
   -Every method has it own signature.
@@ -28,6 +28,14 @@
     ...
    }
    -The method above have 3 arguments(term, n1, n2) and 3 types (int, float, float) and it is different from the two mthods above.
+ 
+ •There are two kinds of polymorphysm:
+  -Override
+  -Overload
+  
+  •Override:
+   
+  
      
  
 */
