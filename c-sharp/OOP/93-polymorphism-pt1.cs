@@ -31,13 +31,25 @@
  
  •These are them most common polymorphism kinds:
   -Override and Overload
-  
-  •Override:
-   
-  
-     
+  -Below, we're going to create two programs to show how each kind works.    
  
 */
 
 
 //====================================================================================
+
+//•Override
+//Superclass abstract Animal 
+   abstract class Animal
+   {
+      private float weight;
+      private float age;
+      private int limbs;
+     
+      //getters/setters here
+     
+      //These methods below are abstract i.e. they aren't implemented in the superclass
+      public void Move();
+      public void Eat();
+      public void Sound();
+   }
