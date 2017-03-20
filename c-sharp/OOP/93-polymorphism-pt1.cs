@@ -229,27 +229,27 @@ public class Turtle : Reptile
 public class Dog : Animal
 {
   //Note that the three methods below have the same name(ReactTo) with different signatures(string / int / bool)
-  public void ReactTo(string Command)
+  public void ReactTo(string command)
   {
-    if(Command == "Sit" || "Lay down")
+    if(command == "Sit" || "Lay down")
     {
      Console.WriteLine("Command obeyed.Good boy.");
     }else{
      Console.WriteLine("Did nothing.");
     }
   }
-  public void ReactTo(int Hour)
+  public void ReactTo(int hour)
   {
-    if(Hour < 12)
+    if(hour < 12)
     {
       Console.WriteLine("Dog is sleeping.");
     }else if(Hour == 00){
       Console.WriteLine("Bark at the moon.");
     }
   }
-  public void ReactTo(bool Owner)
+  public void ReactTo(bool owner)
   {
-    if(Owner == true)
+    if(owner == true)
     {
      Console.WriteLine("Playing.");
     }else{
