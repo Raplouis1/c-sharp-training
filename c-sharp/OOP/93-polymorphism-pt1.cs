@@ -60,32 +60,106 @@
  {
   private string furColor;
   //getters/setters here
+        public string FurColor
+        {
+            get { return furColor; }
+            set { furColor = value; }
+        }
+        public override void Move()
+        {
+            Console.WriteLine("Running.");
+        }
+
+        public override void Eat()
+        {
+            Console.WriteLine("Breastfeeded.");
+        }
+        public override void Sound()
+        {
+            Console.WriteLine("Mammal sound.");
+        }
  }
- 
+ //---
  class Reptile : Animal
  {
   private string scaleColor;
   //getters/setters here
+        public string ScaleColor
+        {
+            get { return scaleColor; }
+            set { scaleColor = value; }
+        }
+        public override void Move()
+        {
+            Console.WriteLine("Crawling.");
+        }
+
+        public override void Eat()
+        {
+            Console.WriteLine("Eat little animals.");
+        }
+        public override void Sound()
+        {
+            Console.WriteLine("Reptile sound.");
+        }
  }
- 
+ //---
  class Fish : Animal
  {
   private string scaleColor;
   //getters/setters here
-  public void makeBubble()
-  {
-    Console.WriteLine("Made a bubble.");
-  }
+        public string ScaleColor
+        {
+            get { return scaleColor; }
+            set { scaleColor = value; }
+        }
+        public override void Move()
+        {
+            Console.WriteLine("Swimming.");
+        }
+
+        public override void Eat()
+        {
+            Console.WriteLine("Eat seaweed.");
+        }
+        public override void Sound()
+        {
+            Console.WriteLine("No sound.");
+        }
+        
+        public void MakeBubbles()
+        {
+            Console.WriteLine("Bubbles.BloobBloobBloob");
+        }
  }
- 
+ //---
  class Bird : Animal
  {
    private string featherColor;
    //getters/setters here
-   public void makeNest()
-   {
-    Console.WriteLine("Made a nest.");
-   }
+        public string FeatherColor
+        {
+            get { return featherColor; }
+            set { featherColor = value; }
+        }
+        public override void Move()
+        {
+            Console.WriteLine("Flying.");
+        }
+
+        public override void Eat()
+        {
+            Console.WriteLine("Little insects.");
+        }
+        public override void Sound()
+        {
+            Console.WriteLine("Bird sound.");
+        }
+
+        public void MakeANest()
+        {
+            Console.WriteLine("Made a nest.");
+        }
  }
  
 
