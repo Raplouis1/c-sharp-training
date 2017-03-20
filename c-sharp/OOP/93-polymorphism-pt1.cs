@@ -46,7 +46,21 @@
       private int age;
       private int limbs;
      
-      //getters/setters here
+        public float Weight
+        {
+            get { return weight; }
+            set { weight = value; }
+        }
+        public int Age
+        {
+            get { return age; }
+            set { age = value; }
+        }
+        public int Limbs
+        {
+            get { return limbs; }
+            set { limbs = value; }
+        }
      
       //These methods below are abstract i.e. they aren't implemented in the superclass
       public abstract void Move();
@@ -55,21 +69,20 @@
    }
 
 //Subclasses (mammal, reptile, fish, bird)
-
  class Mammal : Animal
  {
   private string furColor;
-  //getters/setters here
+  
         public string FurColor
         {
             get { return furColor; }
             set { furColor = value; }
         }
-        public override void Move()
+        //The methods below will override the method in the abstract class
+        public override void Move() 
         {
             Console.WriteLine("Running.");
         }
-
         public override void Eat()
         {
             Console.WriteLine("Breastfeeded.");
@@ -83,12 +96,13 @@
  class Reptile : Animal
  {
   private string scaleColor;
-  //getters/setters here
+  
         public string ScaleColor
         {
             get { return scaleColor; }
             set { scaleColor = value; }
         }
+        //The methods below will override the method in the abstract class
         public override void Move()
         {
             Console.WriteLine("Crawling.");
@@ -107,12 +121,13 @@
  class Fish : Animal
  {
   private string scaleColor;
-  //getters/setters here
+  
         public string ScaleColor
         {
             get { return scaleColor; }
             set { scaleColor = value; }
         }
+        //The methods below will override the method in the abstract class
         public override void Move()
         {
             Console.WriteLine("Swimming.");
@@ -126,7 +141,7 @@
         {
             Console.WriteLine("No sound.");
         }
-        
+        //---
         public void MakeBubbles()
         {
             Console.WriteLine("Bubbles.BloobBloobBloob");
@@ -142,26 +157,58 @@
             get { return featherColor; }
             set { featherColor = value; }
         }
+        //The methods below will override the method in the abstract class
         public override void Move()
         {
             Console.WriteLine("Flying.");
         }
-
         public override void Eat()
         {
-            Console.WriteLine("Little insects.");
+            Console.WriteLine("Eat Little insects.");
         }
         public override void Sound()
         {
             Console.WriteLine("Bird sound.");
         }
-
+        //---
         public void MakeANest()
         {
             Console.WriteLine("Made a nest.");
         }
  }
  
+//Main class
+    class Program
+    {
+        static void Main(string[] args)
+        {
+          //Animal a1 = new Animal();  This object cannot be created as Animal is an abstract class
+          Mammal m1 = new Mammal();
+          Reptile r1 = new Reptile();
+          Fish f1 = new Fish();
+          Bird b1 = new Bird();
+          
+          m1.setWeight = 15.5;
+          m1.setAge = 20;
+          m1.setLimbs = 4;
+          m1.Move();  //Running
+          m1.Eat(); //Breastfeeded
+          m1.Sound(); //Mammal sound
+         
+          f1.setWeight = 4;
+          f1.setAge = 5;
+          f1.setLimbs = 0;
+          f1.Move(); //Swimming
+          f1.Eat(); //Eat seaweed
+          f1.Sound(); //No sound
+          f1.MakeBubbles(); //Bubbles.BloobBloobBloob
+          
+          //Note that even the methods being the same, the outputs will be different due the override polymorphism
+        }
+    }
+ 
+//====================================================================================
+//•Overload 
 
 
 
