@@ -38,7 +38,11 @@
 
 //====================================================================================
 
-//•Override
+//•Override: occurs when we substitute a superclass' method in the subclass using the same method's signature
+//Example: 
+ //Superclass: public abstract void ExampleMethod();
+ //Subclass: public override void ExampleMethod(){ //code here }
+
 //Superclass abstract Animal 
    abstract class Animal
    {
@@ -177,6 +181,15 @@
         }
  }
  
+//Sub-subclass: turtle
+public class Turtle : Reptile
+{
+  public override Move()
+  {
+   Console.WriteLine("Slowly movement");
+  }
+}
+ 
 //Main class
     class Program
     {
@@ -187,6 +200,7 @@
           Reptile r1 = new Reptile();
           Fish f1 = new Fish();
           Bird b1 = new Bird();
+          Turtle t1 = new Turtle();
           
           m1.setWeight = 15.5;
           m1.setAge = 20;
@@ -202,6 +216,8 @@
           f1.Eat(); //Eat seaweed
           f1.Sound(); //No sound
           f1.MakeBubbles(); //Bubbles.BloobBloobBloob
+         
+          t1.Move(); //Slowly movement
           
           //Note that even the methods being the same, the outputs will be different due the override polymorphism
         }
