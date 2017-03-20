@@ -224,7 +224,55 @@ public class Turtle : Reptile
     }
  
 //====================================================================================
-//•Overload 
+//•Overload: the same method with different signatures in the same class
+//Example: using the method ReactTo() , create multiple methods using the Overload concept:
+public class Dog : Animal
+{
+  //Note that the three methods below have the same name(ReactTo) with different signatures(string / int / bool)
+  public void ReactTo(string Command)
+  {
+    if(Command == "Sit" || "Lay down")
+    {
+     Console.WriteLine("Command obeyed.Good boy.");
+    }else{
+     Console.WriteLine("Did nothing.");
+    }
+  }
+  public void ReactTo(int Hour)
+  {
+    if(Hour < 12)
+    {
+      Console.WriteLine("Dog is sleeping.");
+    }else if(Hour == 00){
+      Console.WriteLine("Bark at the moon.");
+    }
+  }
+  public void ReactTo(bool Owner)
+  {
+    if(Owner == true)
+    {
+     Console.WriteLine("Playing.");
+    }else{
+     Console.WriteLine("Stranger!!!Woof!!Woof!!");
+    }
+  }
+
+}
+
+//Main Class
+static void Main()
+{
+  Dog d1 = new Dog();
+  
+  d1.ReactTo("Sit"); //Command obeyed.Good boy.
+  d1.ReactTo(00); //Bark at the moon. 
+  d1.ReactTo(false); //Stranger!!!Woof!!Woof!
+}
+
+//====================================================================================
+//Tips to remember the polymorphisms kinds:
+//•Override: same (methods) signature, different classes
+//•Overload: different (methods) signatures, same class
 
 
 
